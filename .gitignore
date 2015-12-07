@@ -1,0 +1,10 @@
+.DS_Store
+
+*.sublime-workspace
+
+bin
+dist
+downloads
+tmp
+node_modules
+

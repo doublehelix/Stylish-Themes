@@ -1,0 +1,94 @@
+
+    /**************************************************/
+    /* EXPERIMENTAL LAYOUT */
+    /**************************************************/
+
+    .menu {
+        background-color: @bg-darker;
+        border: 1px solid @border-default;
+    }
+    .menu-item {
+        text-shadow: none;
+        border-bottom: 1px solid @border-default;
+    }
+    .menu-item:hover {
+        background-color: #0C6600;
+        color: #fff
+    }
+
+    .menu-item.selected {
+        color: @link-light;
+        cursor: default;
+        background-color: #567;
+    }
+    .menu-item.selected::before {
+        width: 3px;
+        background-color: @link-default;
+    }
+
+    .repohead.experiment-repo-nav {
+        background-color: #012;
+    }
+
+    .reponav-item { color: #bbb; }
+    .reponav-item:hover { color: @link-light; }
+
+    .reponav-item .octicon { color: #bbb; }
+    .reponav-item:hover .octicon { color: @link-light; }
+
+    .reponav-item .counter { background-color: #bbb; color: #333; }
+    .reponav-item.selected .counter,
+    .reponav-item:hover .counter { background-color: @link-light; }
+
+    .reponav-item.selected {
+        color: @link-light;
+        background-color: @bg-default;
+        border-color: #6CC644 #E5E5E5 transparent;
+    }
+    .reponav-item.selected:hover { color: @link-light; }
+
+
+    .blog-aside .rss {
+        color: @link-light;
+    }
+    .blog-aside .rss .octicon {
+        color: @link-default; /* #FF712C */
+    }
+
+    .blog-title { color: @link-light; }
+
+    .blog-post-meta {
+        color: #ccc;
+    }
+
+    .blog-post-meta a {
+        color: @link-default;
+    }
+
+    .blog-content {
+        width: 735px;
+        font-family: "Helvetica Neue",Helvetica,Arial,freesans,sans-serif;
+        background: #345;
+        padding: 2em;
+        border-radius: 1em;
+        border: 1px solid @border-default;
+        box-shadow: 0 0 0.5em rgba(0,0,0,0.3);
+    }
+
+    .blog-post-body {
+        color: @link-light;
+    }
+
+    .blog-feedback {
+        margin: 50px 0px;
+        background-color: @bg-dark;
+        border-width: 1px;
+        border-style: solid;
+        border-color: @border-default;
+        border-radius: 3px;
+        box-shadow: 0 0 0.5em rgba(0,0,0,0.3);
+    }
+    .blog-feedback-header {
+        border-bottom: 1px solid @border-default;
+        box-shadow: none;
+    }
