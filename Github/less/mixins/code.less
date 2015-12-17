@@ -1,0 +1,159 @@
+/**************************************************/
+/* TEXT DIFF */
+/**************************************************/
+
+.diffstat {
+    color: #ccc;
+}
+
+.text-diff-added {
+    color: #55F532;
+}
+
+.text-diff-deleted {
+    color: #FD2C00;
+}
+
+.blob-wrapper {
+    background-color: @bg-dark;
+}
+
+.blob-code-hunk,
+.blob-code-expandable {
+    background-color: #567;
+}
+
+.blob-num {
+    color: inherit;
+}
+
+.blob-num-hunk,
+.blob-num-expandable {
+    background-color: #567;
+}
+
+.blob-num-expandable .diff-expander {
+    color: @link-light;
+}
+
+.blob-expanded .blob-num,
+.blob-expanded .blob-code {
+    background-color: @bg-default;
+}
+
+.blob-code-inner {
+    color: @link-light;
+}
+
+.blob-code-deletion {
+    background-color: #9F5C5C;
+}
+
+.blob-code-deletion .x {
+    background-color: #f66;
+}
+
+.blob-num-deletion {
+    background-color: #933;
+    border-color: #F1C0C0;
+}
+
+.blob-code-addition {
+    background-color: #3A9F6A;
+}
+
+.blob-code-addition .x {
+    background-color: #6c6;
+}
+
+.blob-num-addition {
+    background-color: #3B9F3B;
+    border-color: #C1E9C1;
+}
+
+.blob-num-addition.selected-line,
+.blob-num-deletion.selected-line {
+    background-color: #38f;
+}
+
+.blob-code-addition.selected-line,
+.blob-code-deletion.selected-line {
+    background-color: #09f;
+}
+
+.file-header {
+    background-color: @bg-darker;
+    border-bottom: 1px solid #D8D8D8;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+}
+
+.file .data.empty {
+    color: #ccc;
+}
+
+.file .image {
+    background-color: @bg-dark;
+}
+
+/**************************************************/
+/* CODE COLORS */
+/**************************************************/
+
+.pl-c {
+    color: #6c6;
+}
+
+/* comment */
+.pl-ent {
+    color: #93d38c;
+}
+
+/* entity */
+.pl-e,
+.pl-en {
+    color: #c9aDf3;
+}
+
+/* entity attribute */
+.pl-smi {
+    color: #f6a;
+}
+
+.pl-k {
+    color: #f6c;
+}
+
+.pl-c1,
+.pl-s .pl-v {
+    color: #0df;
+}
+
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+    color: #88a6f8;
+}
+
+/* strings */
+.diff-table .pl-c,
+.diff-table .pl-ent,
+.diff-table .pl-e,
+.diff-table .pl-en,
+.diff-table .pl-pds,
+.diff-table .pl-s,
+.diff-table .pl-s .pl-pse .pl-s1,
+.diff-table .pl-sr,
+.diff-table .pl-sr .pl-cce,
+.diff-table .pl-sr .pl-sra,
+.diff-table .pl-sr .pl-sre,
+.diff-table .pl-k,
+.diff-table .pl-smi,
+.diff-table .pl-c1,
+.diff-table .pl-v {
+    color: @link-light;
+}

@@ -1,0 +1,87 @@
+/**************************************************/
+/*************** BUTTONS AND LINKS ****************/
+/**************************************************/
+
+a {
+
+    /* color: #70A8F0; */
+    color: @link-default;
+    color: #6f6;
+}
+
+.branch-name {
+    background-color: #234;
+    border: 1px solid #789;
+}
+
+a.branch-name {
+    color: #fff;
+}
+
+.btn {
+    color: @link-light;
+    background-color: @text-light;
+    border: 1px solid #678;
+    background: linear-gradient(#456, #234);
+    /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); */
+}
+
+.btn:hover,
+.btn:active,
+.btn.zeroclipboard-is-hover,
+.btn.zeroclipboard-is-active {
+    background-color: #DDD;
+    background-image: linear-gradient(#678, #345);
+    border-color: #CCC;
+}
+
+.btn:active,
+.btn.selected,
+.btn.zeroclipboard-is-active {
+
+    /*         background-color: #DCDCDC; */
+    background-color: @bg-darker;
+    background-image: none;
+    border-color: #567;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
+}
+
+.btn-primary {
+    color: @link-light;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15);
+    background-color: #60B044;
+    background-image: linear-gradient(#8ADD6D, #60B044);
+    border-color: #5CA941;
+}
+
+.btn-primary:hover {
+    color: @link-light;
+    background-color: #569E3D;
+    background-image: linear-gradient(#79D858, #569E3D);
+    border-color: #4A993E;
+}
+
+.btn-link {
+    color: @link-light;
+    background-color: transparent;
+    border: 0px none;
+    -moz-user-select: none;
+}
+
+.muted-link {
+    color: #ddd;
+    text-decoration: underline;
+}
+
+.muted-link:hover {
+    color: @link-default;
+    text-decoration: underline;
+}
+
+.collection-tools .select-menu-button {
+    color: #ccc;
+}
+
+.collection-tools .select-menu-button:hover {
+    color: @link-default;
+}

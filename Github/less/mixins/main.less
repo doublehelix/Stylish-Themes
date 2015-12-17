@@ -1,0 +1,257 @@
+body {
+    background-color: @bg-default; //@bg-extra-dark;
+    color: @text-light;
+}
+
+.header {
+    background-color: @bg-dark;
+    border-bottom: 1px solid @border-light;
+    color: #ddd;
+}
+
+.site-footer {
+    color: #ccc;
+}
+
+.repohead h1 {
+    color: @text-light;
+}
+
+.header-logo-wordmark {
+    color: #fff;
+}
+
+.header-logo-wordmark:hover {
+    color: @link-default;
+}
+
+.header-logo-invertocat {
+    color: @link-light;
+    &:hover {
+        color: @link-default;
+    }
+}
+
+.header-nav-link {
+    color: @link-light;
+    &:hover {
+        color: @link-default;
+    }
+}
+
+.auth-form form {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+}
+
+.auth-form-header {
+    color: #FFF;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+    background-color: @bg-extra-dark;
+    border: 1px solid @border-default;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.auth-form-body {
+    background-color: @bg-dark;
+    border-width: 0px 1px 1px;
+    border-style: none solid solid;
+    border-color: -moz-use-text-color @border-default @border-default;
+    border-image: none;
+    border-radius: 0px 0px 5px 5px;
+}
+
+
+/** Unread notifications indicator **/
+.notification-indicator .mail-status {
+    background-image: linear-gradient(@link-default-light, @link-default);
+    color: @link-light;
+    border: 2px solid @border-light;
+}
+
+.main-content {
+    background-color: @bg-default;
+    padding-bottom: 24px;
+}
+
+.discussion-timeline-actions {
+   border-top: 2px solid transparent;
+   background: transparent;
+}
+
+.thread-subscription-status {
+    color: #ddd;
+    background: transparent;
+    border: 1px solid @border-light;
+}
+
+.progress-bar {
+   background-color: #678;
+}
+
+.sunken-menu {
+    background-image: linear-gradient(to right, @bg-dark 0%, @bg-default 8px);
+    box-shadow: 1px 0px 0px #456 inset;
+
+    &::before {
+        background-color: transparent;
+        background-image: linear-gradient(@bg-default, rgba(255, 255, 255, 0));
+    }
+
+    &::after {
+        background-color: transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), @bg-default);
+    }
+}
+
+.sunken-menu-item {
+    .octicon {
+        color: #ccc;
+    }
+
+    &:focus .octicon,
+    &:hover .octicon { color: @link-light; }
+
+    &.selected {
+        color: @link-light;
+        background-color: @bg-default;
+        border-color: #678 #0c0 #678 transparent;
+        border-radius: 0px 4px 4px 0px;
+        box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.35);
+
+        .octicon {
+            color: @link-light;
+        }
+
+        &:after {
+            width: 3px;
+            background-color: #0c0;
+            border-radius: 0 3px 3px 0
+        }
+    }
+
+
+}
+
+.sunken-menu-separator {
+    background-image: radial-gradient(farthest-side at left top , #345, rgba(244, 244, 244, 0));
+
+    &::before {
+        background-image: linear-gradient(to right, #678 70%, #89a 100%);
+    }
+}
+
+.tabnav-pr .tabnav-tab,
+.tabnav-tab {
+    color: #ddd;
+    background-color: @bg-darker;
+    border: 1px solid @border-default;
+    border-bottom: none;
+    margin-bottom: 1px;
+    border-radius: 3px 3px 0 0;
+}
+
+.tabnav-tab.selected { background-color: @bg-light; }
+.tabnav-pr .tabnav-tab.selected { color: @link-light; }
+
+.tabnav-extra { color: #ddd; }
+a.tabnav-extra:hover { color: @link-default; }
+
+.subnav-item {
+    border: 1px solid #E5E5E5;
+    background-color: @bg-darker;
+    color: #ccc;
+}
+.subnav-item:hover, .subnav-item:focus {
+    text-decoration: none;
+    background-color: #F5F5F5;
+    color: #678;
+}
+
+.subnav-search-context .btn { color: @link-light; }
+
+.text-emphasized { color: @link-light; }
+.text-muted { color: #bbb; }
+
+.repository-meta { color: #ddd; }
+
+.private .mini-repo-list-item { background-color: @bg-darker; }
+.mini-repo-list-item .repo-description { color: @text-light; }
+.mini-repo-list-item .repo-icon { color: #ddd; }
+.mini-repo-list-item .stars { color: @text-light; }
+
+.filter-bar {
+    background-color: @bg-darker;
+    border-bottom: 1px solid @border-light;
+}
+
+.repo-filterer .repo-filter.filter-selected {
+    color: @link-light;
+    border-bottom-color: @link-default;
+}
+
+/**************************************************/
+/* Home Page */
+/**************************************************/
+
+.bootcamp h1 {
+    background-color: @bg-dark;
+    border-bottom: none;
+}
+.bootcamp .bootcamp-body {
+    background-color:@bg-darker;
+    /* border-color: #345 #678 #678 #678; */
+    border-color: @border-dark;
+}
+.bootcamp ul li {
+    background-image: linear-gradient(#fff, #999);
+    border: 1px solid @border-dark;
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+}
+
+input.input-contrast,
+.input-contrast {
+    background-color: #234;
+    color: #fff;
+    border-color: #678;
+}
+
+input.input-contrast:focus,
+.input-contrast:focus {
+    background-color: #345;
+    color: #fff
+}
+
+.pagehead-nav-item {
+    color: #ccc;
+}
+
+.pagehead-nav-item:hover {
+    color: #fff;
+}
+
+.pagehead-nav-item.selected {
+    color: #fff;
+    border-bottom: 3px solid @nav-item-selection;
+}
+
+/* Explore GitHub */
+.collection-card {
+    background: #345;
+    border: 1px solid #678;
+    border-radius: 3px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.collection-card-meta {
+    color: #ccc;
+}
+
+
+/**************************************************/
+/* STATES */
+/**************************************************/
+
+.state { background-color: #999; }
+.state-open, .state-proposed, .state-reopened { background-color: @link-default; color: @link-light; }
+.state-closed { background-color: #DD2C00; }
+.state-merged { background-color: #6E5494; border: 1px solid #9e84c4; }

@@ -1,0 +1,120 @@
+/**************************************************/
+/* Notifications listing table */
+/**************************************************/
+
+.list-group-item-link {
+    color: #ddd;
+}
+
+.list-group-item.navigation-focus {
+    background-color: @bg-default;
+}
+
+.notification-actions .age {
+    color: #ccc;
+}
+
+.notification-actions .btn-link {
+    color: #def;
+}
+
+.notification-actions .btn-link:hover {
+    color: @link-default;
+}
+
+.avatar-stack .avatar {
+    width: 20px;
+    height: 20px;
+    margin-right: -15px;
+    border-radius: 10px;
+    background-color: @link-light;
+    border-right: 1px solid #FFF;
+}
+
+.type-icon-state-open {
+    color: @link-default;
+}
+
+.type-icon-state-merged {
+    color: #CE74F4;
+}
+
+.type-icon-state-closed {
+    color: #F54;
+}
+
+.type-icon-state-none {
+    color: #ccc;
+}
+
+/**************************************************/
+/* ISSUES listing table */
+/**************************************************/
+
+.table-list-header {
+    background-color: @bg-extra-dark;
+    border: 1px solid @border-light;
+    border-radius: 3px 3px 0 0;
+
+    &-toggle {
+        .btn-link {
+            color: @text-light;
+
+            &:hover,
+            &.selected,
+            &.selected:hover {
+                color: @link-default;
+            }
+        }
+    }
+}
+
+
+.issues-reset-query {
+    color: @text-light;
+
+    &:hover {
+        color: @link-default;
+    }
+}
+
+.issues-listing {
+    .table-list-issues {
+        background-color: @bg-darker;
+
+        .navigation-focus {
+            background-color: @bg-medium;
+
+            .issue-title-link {
+                color: @link-light;
+
+                &:hover {
+                    color: @link-default;
+                }
+            }
+        }
+    }
+}
+
+.issue-title-link {
+    color: #ddd;
+
+    &:hover {
+        color: #7Cd654;
+    }
+}
+
+
+.issue-meta {
+    color: #ccc;
+}
+
+.closed.octicon,
+.reverted.octicon {
+    color: #F40;
+}
+
+/* Unread issues indicator (Left Border) */
+.table-list-item.unread .table-list-cell:first-child {
+    box-shadow: 4px 0 0 @nav-item-selection inset;
+}

@@ -1,19 +1,19 @@
 {
-    "build_systems":
-    [
-        {
-            "cmd":
-            [
-                "grunt",
-                "dist",
-                "--no-color"
-            ],
-            "file_regex": "^([^:]*):[ a-z]*([0-9]*)[ a-z,]*([0-9]*), (.*)$",
-            "name": "Dist Build",
-            "shell": true,
-            "working_dir": "${project_path}/Build"
-        }
-    ],
+	"build_systems":
+	[
+		{
+			"cmd":
+			[
+				"grunt",
+				"dist",
+				"--no-color"
+			],
+			"file_regex": "^([^:]*):[ a-z]*([0-9]*)[ a-z,]*([0-9]*), (.*)$",
+			"name": "Dist Build",
+			"shell": true,
+			"working_dir": "${project_path}/Build"
+		}
+	],
 	"folders":
 	[
 		{
@@ -21,6 +21,9 @@
 		},
 		{
 			"path": "build"
+		},
+		{
+			"path": "dist"
 		}
 	]
 }
