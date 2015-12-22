@@ -1,4 +1,4 @@
-body {
+html, body {
     background-color: @bg-default; //@bg-extra-dark;
     color: @text-light;
 }
@@ -39,9 +39,9 @@ body {
     }
 }
 
-.auth-form form {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-}
+// .auth-form form {
+//     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+// }
 
 .auth-form-header {
     color: #FFF;
@@ -58,6 +58,19 @@ body {
     border-color: -moz-use-text-color @border-default @border-default;
     border-image: none;
     border-radius: 0px 0px 5px 5px;
+}
+
+.session-authentication {
+    background-color: @bg-default;
+
+    .auth-form-header {
+        background-color: transparent;
+        color: @text-light;
+    }
+
+    .header-logo {
+        color: @link-light;
+    }
 }
 
 

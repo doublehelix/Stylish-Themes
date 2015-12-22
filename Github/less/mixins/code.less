@@ -157,3 +157,44 @@
 .diff-table .pl-v {
     color: @link-light;
 }
+
+/** CODE SEARCH */
+.tree-browser {
+    .octicon-file-text {
+        color: @text-default;
+    }
+
+    tr.navigation-focus td {
+        background-color: @bg-medium;
+
+        .octicon-chevron-right {
+            color: @link-default;
+        }
+    }
+
+    td {
+        background: @bg-darker;
+        border-bottom: 1px solid @border-default;
+        padding: 7px 3px;
+        color: @text-default;
+        vertical-align: middle;
+        white-space: nowrap;
+
+        &:first-child {
+            border-left: 1px solid @border-default;
+        }
+        &:last-child {
+            border-right: 1px solid @border-default;
+        }
+    }
+}
+
+
+.tree-browser-result mark {
+    background-color: transparent;
+    color: @link-light;
+}
+mark {
+    background: #ff0;
+    color: #000;
+}
