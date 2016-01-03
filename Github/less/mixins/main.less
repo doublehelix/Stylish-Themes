@@ -170,27 +170,45 @@ html, body {
 a.tabnav-extra:hover { color: @link-default; }
 
 .subnav-item {
-    border: 1px solid #E5E5E5;
+    border: 1px solid @border-default;
     background-color: @bg-darker;
-    color: #ccc;
+    color: @text-default;
+
+    &:hover, &:focus {
+        text-decoration: none;
+        background-color: @nav-item-selection;
+        color: @text-darker;
+    }
+
+    &.selected, &.selected:hover, &.selected:focus {
+        color: @link-light; //#fff;
+        background-color: @nav-item-selection; //#4078c0;
+        border-color: @link-default-light; //#4078c0;
+    }
 }
-.subnav-item:hover, .subnav-item:focus {
-    text-decoration: none;
-    background-color: #F5F5F5;
-    color: #678;
-}
+
 
 .subnav-search-context .btn { color: @link-light; }
 
 .text-emphasized { color: @link-light; }
-.text-muted { color: #bbb; }
+.text-muted { color: @text-default; }
 
-.repository-meta { color: #ddd; }
+.repository-meta {
+    color: @text-light; //#ddd;
+}
 
-.private .mini-repo-list-item { background-color: @bg-darker; }
-.mini-repo-list-item .repo-description { color: @text-light; }
-.mini-repo-list-item .repo-icon { color: #ddd; }
-.mini-repo-list-item .stars { color: @text-light; }
+.private .mini-repo-list-item {
+    background-color: @bg-darker;
+}
+.mini-repo-list-item .repo-description {
+    color: @text-light;
+}
+.mini-repo-list-item .repo-icon {
+    color: @text-light; //#ddd;
+}
+.mini-repo-list-item .stars {
+    color: @text-light;
+}
 
 .filter-bar {
     background-color: @bg-darker;
