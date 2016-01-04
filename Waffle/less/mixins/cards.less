@@ -1,0 +1,53 @@
+/****************************************/
+/* Columns */
+/****************************************/
+.board .board-body .column-ct .column .column-header {
+    background-color: #434;
+}
+.board .board-body .column-ct .column {
+   border-right: 4px solid #455;
+}
+
+
+/****************************************/
+/* CARDS */
+/****************************************/
+.board .card {
+    border-radius: 3px;
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.6);
+    transition: box-shadow 1s ease 0s;
+
+    &:hover {
+        box-shadow: 0 0 0.4em rgba(96,255,96,0.9);
+    }
+
+    .card-header {
+        border-radius: 3px 3px 0px 0px;
+        background-color: #233;
+    }
+    .card-body {
+        border-radius: 0px 0px 3px 3px;
+        background-color: #484850;
+
+        .title, textarea.title {
+            background-color: transparent; /*#484850;*/
+            color: #cdd;
+
+            border-radius: 3px;
+            border: 1px solid transparent;
+        }
+    }
+}
+
+.label-pill {
+    color: #222;
+}
+
+.label-pill.light {
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+}
+
+.label-pill.dark {
+    color: #fff;
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+}
