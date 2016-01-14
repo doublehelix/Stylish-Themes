@@ -1,11 +1,12 @@
 /****************************************/
 /* Columns */
 /****************************************/
-.board .board-body .column-ct .column .column-header {
-    background-color: #434;
-}
 .board .board-body .column-ct .column {
-   border-right: 4px solid #455;
+    border-right: @col-border-right;
+
+    .column-header {
+        background-color: @bg-col-head;
+    }
 }
 
 
@@ -14,7 +15,7 @@
 /****************************************/
 .board .card {
     border-radius: 3px;
-    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.6);
+    box-shadow: @card-shadow;
     transition: box-shadow 1s ease 0s;
 
     &:hover {
@@ -23,15 +24,15 @@
 
     .card-header {
         border-radius: 3px 3px 0px 0px;
-        background-color: #233;
+        background-color: @bg-card-header;
     }
     .card-body {
         border-radius: 0px 0px 3px 3px;
-        background-color: #484850;
+        background-color: @bg-cards;
 
         .title, textarea.title {
-            background-color: transparent; /*#484850;*/
-            color: #cdd;
+            background-color: @bg-card-title; // @bg-cards
+            color: @text-default;
 
             border-radius: 3px;
             border: 1px solid transparent;
@@ -44,10 +45,10 @@
 }
 
 .label-pill.light {
-    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+    text-shadow: @text-shadow-light;
 }
 
 .label-pill.dark {
-    color: #fff;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.2);
+    color: @text-light;
+    text-shadow: @text-shadow-dark;
 }

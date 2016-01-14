@@ -20,7 +20,8 @@
             "path": "less"
         },
         {
-            "path": "build"
+            "path": "build",
+            "folder_exclude_patterns": [ "node_modules" ]
         },
         {
             "path": "dist"
