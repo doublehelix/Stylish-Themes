@@ -1,6 +1,30 @@
-html, body {
-    background-color: @bg-default; //@bg-extra-dark;
+html,
+body {
     color: @text-light;
+    background-color: @bg-default; //@bg-extra-dark;
+}
+
+.container {
+    width: 80%;
+    min-width: 980px;
+}
+
+.dashboard .news {
+    background: @bg-default;
+    border: 1px solid @border-medium;
+    border-radius: 0.3em;
+    padding-top: 0.6em;
+    padding-bottom: 1em;
+}
+
+
+.warning {
+    background-color: #fffccc;
+    color: #900;
+
+    table.files td.icon {
+        color: #900;
+    }
 }
 
 .header {
@@ -73,6 +97,20 @@ html, body {
     }
 }
 
+.form-control, .form-select {
+    // padding: 6px 8px;
+    // color: #333;
+    // border: 1px solid #ddd;
+    // border-radius: 3px;
+    // box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+.header-search-wrapper {
+    padding: 0;
+}
+
+.url-field {
+    min-height: 26px;
+}
 
 /** Unread notifications indicator **/
 .notification-indicator .mail-status {
@@ -82,7 +120,7 @@ html, body {
 }
 
 .main-content {
-    background-color: @bg-default;
+    // background-color: @bg-default;
     padding-bottom: 24px;
 }
 
@@ -92,7 +130,7 @@ html, body {
 }
 
 .thread-subscription-status {
-    color: #ddd;
+    color: @text-lightest;
     background: transparent;
     border: 1px solid @border-light;
 }
@@ -177,7 +215,7 @@ a.tabnav-extra:hover { color: @link-default; }
     &:hover, &:focus {
         text-decoration: none;
         background-color: @nav-item-selection;
-        color: @text-darker;
+        color: @text-light;
     }
 
     &.selected, &.selected:hover, &.selected:focus {
@@ -188,26 +226,56 @@ a.tabnav-extra:hover { color: @link-default; }
 }
 
 
-.subnav-search-context .btn { color: @link-light; }
+.subnav-search-context .btn {
+    color: @link-light;
+}
 
-.text-emphasized { color: @link-light; }
-.text-muted { color: @text-default; }
+.text-emphasized {
+    color: @link-light;
+}
+
+.text-muted {
+    color: @text-default !important;
+}
 
 .repository-meta {
     color: @text-light; //#ddd;
 }
 
+.repo-list-item {
+    background: @bg-default;
+    border: 1px solid @border-medium;
+    border-radius: 0.4em;
+    padding: 1em 1em 4em 1em;
+    margin: 1em -1em;
+}
+
+.repo-list .participation-graph {
+    // position: absolute;
+    // right: 0;
+    // bottom: 0;
+    left: 1em;
+    z-index: 1;
+    color: @link-default-light;
+
+    .bars {
+        opacity: 0.2 !important;
+
+        rect {
+            fill: @link-default-light !important;
+        }
+    }
+}
+
 .private .mini-repo-list-item {
     background-color: @bg-darker;
 }
-.mini-repo-list-item .repo-description {
-    color: @text-light;
-}
-.mini-repo-list-item .repo-icon {
-    color: @text-light; //#ddd;
-}
-.mini-repo-list-item .stars {
-    color: @text-light;
+.mini-repo-list-item {
+    .repo-description,
+    .repo-icon,
+    .stars {
+        color: @text-light;
+    }
 }
 
 .filter-bar {
@@ -218,6 +286,19 @@ a.tabnav-extra:hover { color: @link-default; }
 .repo-filterer .repo-filter.filter-selected {
     color: @link-light;
     border-bottom-color: @link-default;
+}
+
+
+.feature-callout {
+    color: #666;
+    background-color: @bg-extra-dark; // #f9f9f9;
+    border: 1px solid #e9e9e9;
+    border-top: 1px dashed #ddd;
+    border-bottom: 0;
+
+    .feature-dismiss-link {
+        color: @link-default; // inherit;
+    }
 }
 
 /**************************************************/
@@ -283,6 +364,6 @@ input.input-contrast:focus,
 /**************************************************/
 
 .state { background-color: #999; }
-.state-open, .state-proposed, .state-reopened { background-color: @link-default; color: @link-light; }
+.state-open, .state-proposed, .state-reopened { background-color: @button-default; color: @link-light; }
 .state-closed { background-color: #DD2C00; }
 .state-merged { background-color: #6E5494; border: 1px solid #9e84c4; }

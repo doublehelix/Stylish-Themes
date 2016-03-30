@@ -2,13 +2,18 @@
 /* TIMELINE */
 /**************************************************/
 
-.timeline-commits {
-    .commit-message a {
-        color: @text-light;
-        text-decoration: underline;
 
-        &:hover {
-            color: @link-default;
+.timeline-commits {
+
+    .commit-message {
+        a,
+        & > code a {
+            color: @text-light;
+            text-decoration: underline;
+
+            &:hover {
+                color: @link-default;
+            }
         }
     }
 
@@ -109,7 +114,7 @@
 }
 
 .timeline-comment-header {
-    color: #ddd;
+    color: @text-light;
     background-color: @bg-darker;
     border-bottom: 1px solid @border-default;
     border-radius: 6px 6px 0 0;
@@ -120,8 +125,8 @@
 }
 
 .timeline-comment {
-    background-color: #567;
-    border: 1px solid #678;
+    background-color: @bg-medium;
+    border: 1px solid @border-dark;
     border-radius: 7px;
     box-shadow: 0 0 4px #444;
 

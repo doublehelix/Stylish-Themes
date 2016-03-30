@@ -2,6 +2,10 @@
 /* ICONS */
 /**************************************************/
 
+a .mega-octicon {
+    color: @text-light; //#333;
+}
+
 .repohead h1.private .mega-octicon,
 .repohead h1.private .octicon,
 .discussion-item-private {
@@ -17,25 +21,42 @@
     margin-left: 8px;
 }
 
-.page-new-repo .octicon-repo {
-    color: #6f6;
+.mini-repo-list-item {
+    .repo-icon {
+        color: #eee;
+    }
 }
 
-.page-new-repo .octicon-lock {
-    // color: #E9DBA5;
-    color: #f8d400;
+.page-new-repo {
+    .octicon-repo {
+        color: #6f6;
+    }
+
+    .octicon-lock {
+        // color: #E9DBA5;
+        color: #f8d400;
+    }
 }
 
 .octicon-btn {
     color: @text-light;
+
+    &:hover {
+        color: @link-default;
+    }
 }
 
-.octicon-btn:hover {
+
+.commit-icon {
     color: @link-default;
-}
 
-.commit-icon .octicon {
-    background: none;
+    .octicon,
+    svg.octicon {
+        background: none;
+        // background-color: @bg-default;
+        // background-color: @bg-default !important;
+        fill: currentColor !important;
+    }
 }
 
 .completeness-indicator-success {

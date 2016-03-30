@@ -1,6 +1,34 @@
 /**************************************************/
+/* MAIN CODE PAGE */
+/**************************************************/
+
+.outline-box-highlighted {
+    background-color: @bg-dark; //#F7FAFD;
+    border-color: #C9D6E3;
+}
+
+.copyable-terminal {
+    background-color: @bg-extra-dark; //#F7F7F7;
+}
+
+/**************************************************/
 /* TEXT DIFF */
 /**************************************************/
+
+.pr-toolbar {
+    // background: @bg-extra-dark;
+    // padding: 0.3em 1em;
+    background: none;
+
+    &.is-stuck::after {
+        background: @bg-extra-dark;
+        border-bottom: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.075);
+    }
+}
+.diffbar {
+    background: none;
+}
 
 .diffstat {
     color: #ccc;

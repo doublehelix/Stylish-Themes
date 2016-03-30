@@ -6,12 +6,14 @@ a {
 
     /* color: #70A8F0; */
     color: @link-default;
-    color: #6f6;
 }
 
 .branch-name {
-    background-color: #234;
-    border: 1px solid #789;
+    background-color: @bg-dark;
+    border: 1px solid @border-default;
+    color: @text-lightest;
+    // background-color: rgba(209,227,237,0.5);
+    // border-radius: 3px;
 }
 
 a.branch-name {
@@ -24,27 +26,31 @@ a.branch-name {
     border: 1px solid #678;
     background: linear-gradient(#456, #234);
     /* box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); */
+
+    &:disabled,
+    &:disabled:hover,
+    &.disabled,
+    &.disabled:hover {
+        color: rgba(0,0,0,0.5);
+        // background-color: rgba(229,229,229,0.5);
+        // background-image: none;
+        // border-color: rgba(197,197,197,0.5);
+        // box-shadow: none;
+    }
+
+    &:hover,
+    &:active,
+    &.selected,
+    &.zeroclipboard-is-hover,
+    &.zeroclipboard-is-active {
+        border-color: @border-medium; // #DCDCDC;
+        background-color: @bg-darker;
+        background-image: linear-gradient(#678, #345); // none;
+        border-color: @border-dark;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
+    }
 }
 
-.btn:hover,
-.btn:active,
-.btn.zeroclipboard-is-hover,
-.btn.zeroclipboard-is-active {
-    background-color: #DDD;
-    background-image: linear-gradient(#678, #345);
-    border-color: #CCC;
-}
-
-.btn:active,
-.btn.selected,
-.btn.zeroclipboard-is-active {
-
-    /*         background-color: #DCDCDC; */
-    background-color: @bg-darker;
-    background-image: none;
-    border-color: #567;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
-}
 
 .btn-primary {
     color: @link-light;
@@ -69,13 +75,13 @@ a.branch-name {
 }
 
 .muted-link {
-    color: #ddd;
-    text-decoration: underline;
-}
+    color: @link-light !important;
+    text-decoration: underline !important;
 
-.muted-link:hover {
-    color: @link-default;
-    text-decoration: underline;
+    &:hover {
+        color: @link-default !important;
+        text-decoration: underline !important;
+    }
 }
 
 .collection-tools .select-menu-button {
@@ -84,4 +90,13 @@ a.branch-name {
 
 .collection-tools .select-menu-button:hover {
     color: @link-default;
+}
+
+.button, .button-secondary {
+    background-color: @link-default; //#297fc7;
+    color: @text-lightest; //#fff;
+
+    &:hover {
+        background-color: @link-default-light; //#3088d0;
+    }
 }

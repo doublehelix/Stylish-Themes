@@ -2,10 +2,6 @@
 /* Releases/Tags */
 /**************************************************/
 
-.tag-references>li a {
-    color: @link-light;
-    text-decoration: none;
-}
 
 .release-authorship {
     color: @text-default;
@@ -13,4 +9,27 @@
     a {
         color: @link-light;
     }
+}
+
+.release-timeline-tags .date {
+    color: @text-default; //#767676;
+}
+
+.tag-info h3 a .tag-name {
+    color: @link-default; //#000;
+}
+
+.tag-references > li a {
+    color: @link-light;
+
+    &:hover {
+        color: @link-default; //#4078c0;
+    }
+}
+
+a:hover, a:active {
+    text-decoration: underline;
+    text-decoration-color: @link-default-light; //-moz-use-text-color;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
 }

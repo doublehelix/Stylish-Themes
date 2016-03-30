@@ -1,4 +1,13 @@
 /**************************************************/
+/* General */
+/**************************************************/
+.signed-out-comment {
+    background-color: @bg-dark; //#fff9ea;
+    // border: solid 1px #dfd8c2;
+    // border-radius: 3px;
+}
+
+/**************************************************/
 /* Notifications listing table */
 /**************************************************/
 
@@ -117,4 +126,37 @@
 /* Unread issues indicator (Left Border) */
 .table-list-item.unread .table-list-cell:first-child {
     box-shadow: 4px 0 0 @nav-item-selection inset;
+}
+
+/* Editor toolbar */
+.toolbar-item ,
+.toolbar-item .menu-target {
+    color: @text-light;
+
+    &:hover,
+    &:focus {
+        color: @link-default;
+    }
+}
+
+.dropdown-item {
+    color: #333;
+
+    .toolbar-commenting &:hover {
+        color: @link-default;
+    }
+}
+
+
+.drag-and-drop {
+    color: @text-default;
+    background-color: @bg-default;
+    border-style: none solid solid;
+    border-color: -moz-use-text-color @border-default @border-default;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.merge-branch-heading {
+    color: @text-light; //#333;
 }

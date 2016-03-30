@@ -79,41 +79,42 @@
 }
 
 table.files {
-    background: #345;
+    background: @bg-darker;
     border-radius: 2px;
+
+    tr.navigation-focus td {
+        background: @bg-medium;
+    }
+
+    td.icon {
+        color: @text-light;
+    }
+
+    td.icon .octicon-file-directory {
+        color: #cde;
+    }
+
+    td.message a:hover {
+        color: @link-default;
+    }
+
+    td.message a {
+        color: @text-light;
+    }
+
+    td .simplified-path {
+        color: #ccc;
+    }
+
+    td.age {
+        color: #ccc;
+    }
 }
 
-table.files tr.navigation-focus td {
-    background: #567;
-}
 
-table.files td.icon {
-    color: @text-light;
-}
-
-table.files td.icon .octicon-file-directory {
-    color: #cde;
-}
-
-table.files td.message a:hover {
-    color: @link-default;
-}
-
-table.files td.message a {
-    color: @text-light;
-}
-
-table.files td .simplified-path {
-    color: #ccc;
-}
-
-table.files td.age {
-    color: #ccc;
-}
-
-#readme .markdown-body,
-#readme .plain {
-    background-color: #567;
+.readme .markdown-body,
+.readme .plain {
+    background-color: @bg-medium; //#567;
     border: 1px solid #DDD;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -123,4 +124,26 @@ table.files td.age {
 
 .breadcrumb strong.final-path {
     color: #eee;
+}
+
+.discussion-item.discussion-commits {
+    background: @bg-default;
+    // padding: 1em 4em;
+    // margin: 0 0 0 4em;
+    border: 1px solid @border-dark;
+    border-radius: 8px;
+}
+
+.discussion-item,
+.discussion-item + .discussion-item {
+    background: @bg-extra-dark;
+    border: 1px solid @border-dark;
+    border-radius: 4px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    padding-right: 1em;
+}
+
+.discussion-item-changes-marker {
+    margin-bottom: 15px;
 }

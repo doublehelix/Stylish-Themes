@@ -65,3 +65,49 @@ h2, h3 {
 .sidebar li.muted a {
     color: @text-default;
 }
+
+div#common-issues {
+    background-color: @bg-dark; // #fafafa;
+    border: 1px solid @border-default; //#ddd;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 #ddd;
+
+    ul {
+        background: @bg-darker none repeat scroll 0% 0%;
+
+        li a:hover {
+            background-color: @bg-light; //#F2F8FF;
+        }
+    }
+}
+
+ul#categories li h5 a {
+    color: @text-lightest; //#666;
+}
+
+h1, h1 span, h2, h2 span {
+    color: @text-lightest; //#333;
+}
+
+/**************************************************/
+/* GUIDES */
+/**************************************************/
+
+ol.toc > li {
+    a {
+        &.active {
+            color: @link-light;
+        }
+    }
+}
+
+article h2 {
+    color: @text-lightest;
+}
+
+.markdown-example .source {
+    font-size: 16px;
+    background: @bg-dark none repeat scroll 0% 0%;
+    border-color: -moz-use-text-color -moz-use-text-color #CCC;
+    border-radius: 0px;
+}

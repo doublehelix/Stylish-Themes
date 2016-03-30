@@ -1,0 +1,1766 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document url-prefix(https://github.com) {
+
+    /* bive the main content area a darker background... */
+    body {
+        background-color: #456;
+        color: #eee;
+    }
+
+    .header {
+        background-color: #234;
+        border-bottom: 1px solid #E5E5E5;
+        color: #ddd;
+    }
+
+    .site-footer {
+        color: #ccc;
+    }
+
+    .repohead h1 {
+        color: #eee;
+    }
+
+    .header-logo-wordmark {
+        color: #fff;
+    }
+
+    .header-logo-wordmark:hover {
+        color: #6CC644;
+    }
+
+    .header-logo-invertocat {
+        color: #fff;
+    }
+
+    .header-logo-invertocat:hover {
+        color: #6CC644;
+    }
+
+    .header-nav-link {
+        color: #fff;
+    }
+
+    .header-nav-link:hover {
+        color: #6CC644;
+    }
+
+    .auth-form form {
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .auth-form-header {
+        color: #FFF;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
+        background-color: #123;
+        border: 1px solid #768995;
+        border-radius: 5px 5px 0px 0px;
+    }
+
+    .auth-form-body {
+        background-color: #234;
+        border-width: 0px 1px 1px;
+        border-style: none solid solid;
+        border-color: -moz-use-text-color #789 #789;
+        border-image: none;
+        border-radius: 0px 0px 5px 5px;
+    }
+
+    /** Unread notifications indicator **/
+    .notification-indicator .mail-status {
+        background-image: linear-gradient(#9CF674, #6CC644);
+        color: #FFF;
+        border: 2px solid #F3F3F3;
+    }
+
+    .main-content {
+        background-color: #456;
+        padding-bottom: 24px;
+    }
+
+    .discussion-timeline-actions {
+        border-top: 2px solid transparent;
+        background: transparent;
+    }
+
+    .thread-subscription-status {
+        color: #ddd;
+        background: transparent;
+        border: 1px solid #EEE;
+    }
+
+    .progress-bar {
+        background-color: #678;
+    }
+
+    .sunken-menu {
+        background-image: linear-gradient(to right, #234 0%, #456 8px);
+        box-shadow: 1px 0px 0px #456 inset;
+    }
+
+    .sunken-menu::before {
+        background-color: transparent;
+        background-image: linear-gradient(#456, rgba(255, 255, 255, 0));
+    }
+
+    .sunken-menu::after {
+        background-color: transparent;
+        background-image: linear-gradient(rgba(255, 255, 255, 0), #456);
+    }
+
+    .sunken-menu-item .octicon {
+        color: #ccc;
+    }
+
+    .sunken-menu-item:focus .octicon,
+    .sunken-menu-item:hover .octicon {
+        color: #fff;
+    }
+
+    .sunken-menu-item.selected {
+        color: #fff;
+        background-color: #456;
+        border-color: #678 #0c0 #678 transparent;
+        border-radius: 0px 4px 4px 0px;
+        box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.35);
+    }
+
+    .sunken-menu-item.selected .octicon {
+        color: #fff;
+    }
+
+    .sunken-menu-item.selected:after {
+        width: 3px;
+        background-color: #0c0;
+        border-radius: 0 3px 3px 0
+    }
+
+    .sunken-menu-separator {
+        background-image: radial-gradient(farthest-side at left top, #345, rgba(244, 244, 244, 0));
+    }
+
+    .sunken-menu-separator::before {
+        background-image: linear-gradient(to right, #678 70%, #89a 100%);
+    }
+
+    .tabnav-pr .tabnav-tab,
+    .tabnav-tab {
+        color: #ddd;
+        background-color: #345;
+        border: 1px solid #789;
+        border-bottom: none;
+        margin-bottom: 1px;
+        border-radius: 3px 3px 0 0;
+    }
+
+    .tabnav-tab.selected {
+        background-color: #789;
+    }
+
+    .tabnav-pr .tabnav-tab.selected {
+        color: #fff;
+    }
+
+    .tabnav-extra {
+        color: #ddd;
+    }
+
+    a.tabnav-extra:hover {
+        color: #6CC644;
+    }
+
+    .subnav-item {
+        border: 1px solid #E5E5E5;
+        background-color: #345;
+        color: #ccc;
+    }
+
+    .subnav-item:hover,
+    .subnav-item:focus {
+        text-decoration: none;
+        background-color: #F5F5F5;
+        color: #678;
+    }
+
+    .subnav-search-context .btn {
+        color: #fff;
+    }
+
+    .text-emphasized {
+        color: #fff;
+    }
+
+    .text-muted {
+        color: #bbb;
+    }
+
+    .repository-meta {
+        color: #ddd;
+    }
+
+    .private .mini-repo-list-item {
+        background-color: #345;
+    }
+
+    .mini-repo-list-item .repo-description {
+        color: #eee;
+    }
+
+    .mini-repo-list-item .repo-icon {
+        color: #ddd;
+    }
+
+    .mini-repo-list-item .stars {
+        color: #eee;
+    }
+
+    .filter-bar {
+        background-color: #345;
+        border-bottom: 1px solid #E5E5E5;
+    }
+
+    .repo-filterer .repo-filter.filter-selected {
+        color: #fff;
+        border-bottom-color: #6CC644;
+    }
+
+    /**************************************************/
+    /* Home Page */
+    /**************************************************/
+
+    .bootcamp h1 {
+        background-color: #234;
+        border-bottom: none;
+    }
+
+    .bootcamp .bootcamp-body {
+        background-color: #345;        /* border-color: #345 #678 #678 #678; */
+        border-color: #677C89;
+    }
+
+    .bootcamp ul li {
+        background-image: linear-gradient(#fff, #999);
+        border: 1px solid #666;
+        box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    }
+
+    input.input-contrast,
+    .input-contrast {
+        background-color: #234;
+        color: #fff;
+        border-color: #678;
+    }
+
+    input.input-contrast:focus,
+    .input-contrast:focus {
+        background-color: #345;
+        color: #fff
+    }
+
+    .pagehead-nav-item {
+        color: #ccc;
+    }
+
+    .pagehead-nav-item:hover {
+        color: #fff;
+    }
+
+    .pagehead-nav-item.selected {
+        color: #fff;
+        border-bottom: 3px solid #6CC644;
+    }
+
+    /* Explore GitHub */
+    .collection-card {
+        background: #345;
+        border: 1px solid #678;
+        border-radius: 3px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    }
+
+    .collection-card-meta {
+        color: #ccc;
+    }
+
+    /**************************************************/
+    /* STATES */
+    /**************************************************/
+
+    .state {
+        background-color: #999;
+    }
+
+    .state-open,
+    .state-proposed,
+    .state-reopened {
+        background-color: #6CC644;
+        color: #fff;
+    }
+
+    .state-closed {
+        background-color: #DD2C00;
+    }
+
+    .state-merged {
+        background-color: #6E5494;
+        border: 1px solid #9e84c4;
+    }
+
+    /**************************************************/
+    /*************** BUTTONS AND LINKS ****************/
+    /**************************************************/
+
+    a {
+        color: #ff8;
+        color: #6CC644;
+        color: #6f6;        /* color: #70A8F0; */
+    }
+
+    .branch-name {
+        background-color: #234;
+        color: #abc;
+        border: 1px solid #789;
+    }
+
+    a.branch-name {
+        color: #fff;
+    }
+
+    .btn {
+        color: #fff;
+        background-color: #EEE;
+        border: 1px solid #678;
+        background: linear-gradient(#456, #234);/*         box-shadow: 0 0 2px rgba(0, 0, 0, 0.7); */
+    }
+
+    .btn:hover,
+    .btn:active,
+    .btn.zeroclipboard-is-hover,
+    .btn.zeroclipboard-is-active {
+        background-color: #DDD;
+        background-image: linear-gradient(#678, #345);
+        border-color: #CCC;
+    }
+
+    .btn:active,
+    .btn.selected,
+    .btn.zeroclipboard-is-active {
+
+        /*         background-color: #DCDCDC; */
+        background-color: #345;
+        background-image: none;
+        border-color: #567;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15) inset;
+    }
+
+    .btn-primary {
+        color: #FFF;
+        text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.15);
+        background-color: #60B044;
+        background-image: linear-gradient(#8ADD6D, #60B044);
+        border-color: #5CA941;
+    }
+
+    .btn-primary:hover {
+        color: #FFF;
+        background-color: #569E3D;
+        background-image: linear-gradient(#79D858, #569E3D);
+        border-color: #4A993E;
+    }
+
+    .btn-link {
+        color: #fff;
+        background-color: transparent;
+        border: 0px none;
+        -moz-user-select: none;
+    }
+
+    .muted-link {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+    .muted-link:hover {
+        color: #6CC644;
+        text-decoration: underline;
+    }
+
+    .collection-tools .select-menu-button {
+        color: #ccc;
+    }
+
+    .collection-tools .select-menu-button:hover {
+        color: #6CC644;
+    }
+
+    /**************************************************/
+    /* Lighten fonts */
+    /**************************************************/
+
+    .text-danger {
+        color: #FD6C40;
+    }
+
+    .text-error,
+    .text-failure {
+        color: #FF3C00;
+    }
+
+    .blankslate {
+        background-color: #234;
+        border: 1px solid #E5E5E5;
+        border-radius: 3px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05) inset;
+    }
+
+    .news .alert .octicon {
+        color: #eee;
+    }
+
+    .news .alert .mega-octicon {
+        color: #eee;
+    }
+
+    .news .alert .simple .title {
+        color: #ddd;
+    }
+
+    .lead {
+        color: #ddd;
+    }
+
+    .setup-header {
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+    }
+
+    .setup-header .lead a {
+        color: #fff;
+    }
+
+    .setup-header .lead a:hover {
+        color: #6CC644;
+    }
+
+    .gh-header-title {
+        color: #fff;
+    }
+
+    .gh-header-number {
+        color: #bbb;
+    }
+
+    .gh-header-meta {
+        color: #ddd;
+    }
+
+    .gh-header-meta .author {
+        color: #fff;
+    }
+
+    .filter-item {
+        color: #ddd;
+    }
+
+    .filter-item:hover {
+        color: #ddd;
+        background-color: #3C9614;
+    }
+
+    .filter-item.selected {
+        color: #FFF;
+        background-color: #6CC644;
+    }
+
+    .subhead-description {
+        color: #ccc;
+    }
+
+    .note {
+        color: #bcd;
+    }
+
+    .form-checkbox .note {
+        color: #abc;
+    }
+
+    .reponame-suggestion {
+        color: #94c86a;
+        cursor: pointer;
+    }
+
+    .owner-reponame .slash {
+        color: #bbb;
+    }
+
+    p.explain {
+        color: #ccc;
+    }
+
+    .org-header-meta .meta-item .meta-link {
+        color: #fff;
+    }
+
+    .org-header-meta .meta-item .meta-link:hover {
+        color: #6CC644;
+    }
+
+    .org-module-link {
+        color: #fff;
+    }
+
+    .org-stats {
+        color: #fff;
+    }
+
+    .org-module-link:hover,
+    .org-module-link:hover .org-stats {
+        color: #6CC644;
+    }
+
+    .vcard-username {
+        color: #ddd;
+    }
+
+    .vcard-detail .octicon {
+        color: #eee;
+    }
+
+    .contrib-number {
+        color: #cde;
+    }
+
+    .table-list {
+        color: #ccc;
+    }
+
+    .table-list-milestones .stat-label {
+        color: #ddd;
+    }
+
+    .table-list-milestones .stat {
+        color: #cde;
+    }
+
+    .milestone-title-link a {
+        color: #fff;
+    }
+
+    .milestone-title-link a:hover {
+        color: #6CC644;
+    }
+
+    .subscriptions-content .sorted-by {
+        color: #eee;
+    }
+
+    .subscriptions-content .repo-icon {
+        color: #eee;
+    }
+
+    .label-description {
+        color: #ddd;
+    }
+
+    .labels-list-action {
+        color: #eee;
+    }
+
+    .labels-list-action:hover {
+        color: #6CC644;
+    }
+
+    .discussion-item .author {
+        color: #fff;
+    }
+
+    .discussion-item-header {
+        color: #ddd;
+    }
+
+    .discussion-sidebar-heading {
+        color: #ddd;
+    }
+
+    .discussion-sidebar-toggle,
+    .discussion-sidebar-toggle .octicon {
+        color: #fff;
+    }
+
+    .discussion-sidebar-toggle:hover {
+        color: #6CC644;
+    }
+
+    .discussion-sidebar-item {
+        color: #ddd;
+    }
+
+    .discussion-item-ref-title .title-link {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+    .discussion-item-ref-title .title-link:hover {
+        color: #6CC644;
+        text-decoration: underline;
+    }
+
+    .discussion-item-ref-title .title-link:hover .issue-num {
+        color: inherit;
+    }
+
+    .discussion-item-ref-title .issue-num {
+        color: #ccc;
+    }
+
+    .discussion-item-entity {
+        color: #6CC644;
+    }
+
+    .discussion-item-entity:hover {
+        color: #6CC644;
+    }
+
+    .discussion-item .renamed-was,
+    .discussion-item .renamed-is {
+        color: #eee;
+    }
+
+    .repo-list-description {
+        color: #ddd;
+    }
+
+    .repo-list-meta {
+        color: #eee;
+    }
+
+    .repo-list-stats {
+        color: #ddd;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+        background-color: #234;
+        border-radius: 3px;
+        border: 1px solid #789;
+    }
+
+    .markdown-body blockquote {
+        color: #dfd;
+        border-left: 4px solid #6c6;
+    }
+
+    .markdown-body code,
+    .markdown-body tt {
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 3px;
+        padding: 2px 3px;
+        border: 1px solid #789;
+        color: #fff;
+    }
+
+    .markdown-body table tr {
+        background-color: #234;
+        border-top: 1px solid #789;
+    }
+
+    .markdown-body table tr:nth-child(2n) {
+        background-color: #345;
+    }
+
+    .markdown-body h1 .octicon-link,
+    .markdown-body h2 .octicon-link,
+    .markdown-body h3 .octicon-link,
+    .markdown-body h4 .octicon-link,
+    .markdown-body h5 .octicon-link,
+    .markdown-body h6 .octicon-link {
+        color: #ff0;
+        vertical-align: middle;
+        visibility: hidden;
+    }
+
+    .markdown-body img {
+        background-color: #FFF;
+        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .sidebar-assignee .assignee {
+        color: #fff;
+    }
+
+    .sidebar-assignee .assignee:hover {
+        color: #6CC644;
+    }
+
+    .milestone-name {
+        color: #fff;
+    }
+
+    .milestone-name:hover {
+        color: #6CC644;
+    }
+
+    .lock-toggle-link {
+        color: #fff;
+    }
+
+    .lock-toggle-link:hover {
+        color: #6CC644;
+    }
+
+    .news blockquote {
+        color: #ddd;
+    }
+
+    .news div.message,
+    .news li blockquote {
+        color: #eee;
+    }
+
+    .protip-callout {
+        color: #eef;
+    }
+
+    .protip code {
+        background-color: #234;
+        padding: 2px 8px;
+        border: 1px solid #678;
+    }
+
+    .subscribe-feed {
+        color: #ddd;
+    }
+
+    .octofication .message {
+        background-color: #234;
+        border: 1px solid #9CF674;
+    }
+
+    .octofication .message p {
+        color: #ccc;
+    }
+
+    .octofication .broadcast-icon {
+        color: #6CC644;
+    }
+
+    /**************************************************/
+
+    /* CONTAINERS */
+
+    /**************************************************/
+
+    .org-header {
+        color: #666;
+        border-bottom: 1px solid #EEE;
+        background-color: #234;
+    }
+
+    .org-name {
+        color: #fff;
+    }
+
+    .pagehead-tabs-item {
+        color: #ccc;
+        border: 1px solid #abc;
+        border-bottom: transparent;
+        margin: 0 5px 0 0;
+    }
+
+    .pagehead-tabs-item:hover {
+        color: #fff;
+    }
+
+    .pagehead-tabs-item.selected {
+        color: #222;
+        background-color: #789;
+        border-top: 2px solid #6CC644;
+        border-color: #6CC644 #abc transparent;
+    }
+
+    .pagehead-tabs-item.selected:hover {
+        color: #345;
+    }
+
+    .profilecols .filter-bar {
+        background: none;
+        border-bottom: 1px solid #DDD;
+    }
+
+    .menu-heading {
+        color: #eee;
+        background-color: #234;
+        border-bottom: 1px solid #789;
+    }
+
+    .boxed-group > h3,
+    .boxed-group .heading {
+        background-color: #234;
+    }
+
+    .boxed-group-inner {
+        background: #345;
+        border: 1px solid #ccc;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        color: #eee;
+    }
+
+    .boxed-group-inner .help {
+        border-top: 1px solid #DDD;
+        color: #ccd;
+    }
+
+    .boxed-group-list .access-level {
+        color: #ace;
+    }
+
+    .boxed-group-list > li {
+        border-bottom: 1px solid #789;
+    }
+
+    .boxed-group-list > li:hover {
+        background: #567;
+    }
+
+    .simple-box {
+        border: 1px solid #234;
+        background-color: #345;
+        border-radius: 3px;
+    }
+
+    .setup-info-module {
+        background-color: #234;
+        border: 1px solid #789;
+        border-radius: 3px;
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.075);
+    }
+
+    .setup-wrapper .oauth-permissions-details {
+        background-color: #234;
+    }
+
+    .oauth-permissions-details .permission-title {
+        color: #fff;
+    }
+
+    .oauth-permissions-details .mega-octicon {
+        color: #ddd;
+    }
+
+    .oauth-permissions-details .permission-summary .access-details {
+        color: #ddd;
+    }
+
+    /**************************************************/
+
+    /* MAIN REPO */
+
+    /**************************************************/
+
+    .user-mention,
+    .team-mention {
+        color: #fff;
+    }
+
+    .branch-infobar {
+        color: #ccc;
+        background-color: #123;
+        border-style: solid;
+        border-color: #DDD;
+    }
+
+    .commit-tease {
+        color: #aaa;
+        background-color: #234;
+        border: 1px solid #C1DCE9;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .commit-tease-sha {
+        color: #6CC644;
+    }
+
+    .commit-tease a.message {
+        color: #6CC644;
+    }
+
+    .commit-sha {
+        background: #345;
+        border: 1px solid #789;
+        border-radius: 0.2em;
+    }
+
+    .commit-tease-contributors {
+        background-color: #678;
+        border-top: 1px solid #C1DCE9;
+    }
+
+    .commit-tease-contributors a.muted-link {
+        color: #fff;
+    }
+
+    .commit-tease-contributors a.muted-link:hover {
+        color: #6CC644;
+    }
+
+    .numbers-summary .octicon {
+        color: #eee;
+    }
+
+    .numbers-summary a:hover {
+        color: #6CC644;
+    }
+
+    .numbers-summary a,
+    .numbers-summary .nolink {
+        color: #ddd;
+    }
+
+    .repo-list-stats .repo-list-stat-item {
+        color: #fff;
+    }
+
+    .repo-list-stats .repo-list-stat-item:hover {
+        color: #6CC644;
+    }
+
+    .repository-lang-stats ol.repository-lang-stats-numbers li .lang {
+        color: #eee;
+    }
+
+    .repository-lang-stats ol.repository-lang-stats-numbers li > a,
+    .repository-lang-stats ol.repository-lang-stats-numbers li > span {
+        color: #ccc;
+    }
+
+    table.files {
+        background: #345;
+        border-radius: 2px;
+    }
+
+    table.files tr.navigation-focus td {
+        background: #567;
+    }
+
+    table.files td.icon {
+        color: #eee;
+    }
+
+    table.files td.icon .octicon-file-directory {
+        color: #cde;
+    }
+
+    table.files td.message a:hover {
+        color: #6CC644;
+    }
+
+    table.files td.message a {
+        color: #eee;
+    }
+
+    table.files td .simplified-path {
+        color: #ccc;
+    }
+
+    table.files td.age {
+        color: #ccc;
+    }
+
+    #readme .markdown-body,
+    #readme .plain {
+        background-color: #345;
+        border: 1px solid #DDD;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        padding: 30px;
+        word-wrap: break-word;
+    }
+
+    .breadcrumb strong.final-path {
+        color: #eee;
+    }
+
+    /**************************************************/
+
+    /* TEXT DIFF */
+
+    /**************************************************/
+
+    .diffstat {
+        color: #ccc;
+    }
+
+    .text-diff-added {
+        color: #55F532;
+    }
+
+    .text-diff-deleted {
+        color: #FD2C00;
+    }
+
+    .blob-wrapper {
+        background-color: #234;
+    }
+
+    .blob-code-hunk,
+    .blob-code-expandable {
+        background-color: #567;
+    }
+
+    .blob-num {
+        color: inherit;
+    }
+
+    .blob-num-hunk,
+    .blob-num-expandable {
+        background-color: #567;
+    }
+
+    .blob-num-expandable .diff-expander {
+        color: #fff;
+    }
+
+    .blob-expanded .blob-num,
+    .blob-expanded .blob-code {
+        background-color: #456;
+    }
+
+    .blob-code-inner {
+        color: #fff;
+    }
+
+    .blob-code-deletion {
+        background-color: #9F5C5C;
+    }
+
+    .blob-code-deletion .x {
+        background-color: #f66;
+    }
+
+    .blob-num-deletion {
+        background-color: #933;
+        border-color: #F1C0C0;
+    }
+
+    .blob-code-addition {
+        background-color: #3A9F6A;
+    }
+
+    .blob-code-addition .x {
+        background-color: #6c6;
+    }
+
+    .blob-num-addition {
+        background-color: #3B9F3B;
+        border-color: #C1E9C1;
+    }
+
+    .blob-num-addition.selected-line,
+    .blob-num-deletion.selected-line {
+        background-color: #38f;
+    }
+
+    .blob-code-addition.selected-line,
+    .blob-code-deletion.selected-line {
+        background-color: #09f;
+    }
+
+    .file-header {
+        background-color: #345;
+        border-bottom: 1px solid #D8D8D8;
+        border-top-left-radius: 2px;
+        border-top-right-radius: 2px;
+    }
+
+    .file .data.empty {
+        color: #ccc;
+    }
+
+    .file .image {
+        background-color: #234;
+    }
+
+    /**************************************************/
+
+    /* CODE COLORS */
+
+    /**************************************************/
+
+    .pl-c {
+        color: #6c6;
+    }
+
+    /* comment */
+    .pl-ent {
+        color: #93d38c;
+    }
+
+    /* entity */
+    .pl-e,
+    .pl-en {
+        color: #c9aDf3;
+    }
+
+    /* entity attribute */
+    .pl-smi {
+        color: #f6a;
+    }
+
+    .pl-k {
+        color: #f6c;
+    }
+
+    .pl-c1,
+    .pl-s .pl-v {
+        color: #0df;
+    }
+
+    .pl-pds,
+    .pl-s,
+    .pl-s .pl-pse .pl-s1,
+    .pl-sr,
+    .pl-sr .pl-cce,
+    .pl-sr .pl-sra,
+    .pl-sr .pl-sre {
+        color: #88a6f8;
+    }
+
+    /* strings */
+    .diff-table .pl-c,
+    .diff-table .pl-ent,
+    .diff-table .pl-e,
+    .diff-table .pl-en,
+    .diff-table .pl-pds,
+    .diff-table .pl-s,
+    .diff-table .pl-s .pl-pse .pl-s1,
+    .diff-table .pl-sr,
+    .diff-table .pl-sr .pl-cce,
+    .diff-table .pl-sr .pl-sra,
+    .diff-table .pl-sr .pl-sre,
+    .diff-table .pl-k,
+    .diff-table .pl-smi,
+    .diff-table .pl-c1,
+    .diff-table .pl-v {
+        color: #fff;
+    }
+
+    /**************************************************/
+
+    /* Notifications listing table */
+
+    /**************************************************/
+
+    .list-group-item-link {
+        color: #ddd;
+    }
+
+    .list-group-item.navigation-focus {
+        background-color: #456;
+    }
+
+    .notification-actions .age {
+        color: #ccc;
+    }
+
+    .notification-actions .btn-link {
+        color: #def;
+    }
+
+    .notification-actions .btn-link:hover {
+        color: #6CC644;
+    }
+
+    .avatar-stack .avatar {
+        width: 20px;
+        height: 20px;
+        margin-right: -15px;
+        border-radius: 10px;
+        background-color: #FFF;
+        border-right: 1px solid #FFF;
+    }
+
+    .type-icon-state-open {
+        color: #6CC644;
+    }
+
+    .type-icon-state-merged {
+        color: #CE74F4;
+    }
+
+    .type-icon-state-closed {
+        color: #F54;
+    }
+
+    .type-icon-state-none {
+        color: #ccc;
+    }
+
+    /**************************************************/
+
+    /* ISSUES listing table */
+
+    /**************************************************/
+
+    .issues-reset-query {
+        color: #ddd;
+    }
+
+    .issues-reset-query:hover {
+        color: #7Cd654;
+    }
+
+    .issues-listing .table-list-issues {
+        background-color: #345;
+    }
+
+    .issues-listing .table-list-issues .navigation-focus {
+        background-color: #567;
+    }
+
+    .issue-title-link {
+        color: #ddd;
+    }
+
+    .issue-title-link:hover {
+        color: #7Cd654;
+    }
+
+    .issues-listing .table-list-issues .navigation-focus .issue-title-link {
+        color: #fff;
+    }
+
+    .issues-listing .table-list-issues .navigation-focus .issue-title-link:hover {
+        color: #7Cd654;
+    }
+
+    .issue-meta {
+        color: #ccc;
+    }
+
+    .closed.octicon,
+    .reverted.octicon {
+        color: #F40;
+    }
+
+    /* Unread issues indicator (Left Border) */
+    .table-list-item.unread .table-list-cell:first-child {
+        box-shadow: 4px 0 0 #6CC644 inset;
+    }
+
+    /**************************************************/
+
+    /* ICONS */
+
+    /**************************************************/
+
+    .repohead h1.private .mega-octicon,
+    .repohead h1.private .octicon,
+    .discussion-item-private {
+        color: #ff8;
+    }
+
+    .repo-private-label,
+    .gist-secret-label {
+        color: #ccc; /*#A1882B;*/
+        background-color: #c44; /*#FFEFC6;*/
+        border: 1px solid #f00;
+        margin-top: -4px;
+        margin-left: 8px;
+    }
+
+    .page-new-repo .octicon-repo {
+        color: #6f6;
+    }
+
+    .page-new-repo .octicon-lock {
+
+        /*         color: #E9DBA5; */
+        color: #f8d400;
+    }
+
+    .octicon-btn {
+        color: #eee;
+    }
+
+    .octicon-btn:hover {
+        color: #6CC644;
+    }
+
+    .commit-icon .octicon {
+        background: none;
+    }
+
+    .completeness-indicator-success {
+        color: #FFF;
+        background-color: #6CC644;
+    }
+
+    .completeness-indicator-error {
+        color: #FFF;
+        background-color: #ED3C00;
+    }
+
+    /**************************************************/
+
+    /* TIMELINE */
+
+    /**************************************************/
+
+    .timeline-commits .commit-message a {
+        color: #ddd;
+        text-decoration: underline;
+    }
+
+    .timeline-commits .commit-message a:hover {
+        color: #6CC644;
+    }
+
+    .timeline-commits .author {
+        color: #FFFFFF;
+    }
+
+    .timeline-commits .hidden-text-expander a {
+        background-color: #789;
+    }
+
+    .timeline-commits .commit-message a {
+        color: #eee;
+    }
+
+    .timeline-commits .hidden-text-expander a:hover {
+        color: #FFF;
+        background-color: #6CC644;
+    }
+
+    .commit-desc pre {
+        color: #b9c0c3;
+    }
+
+    .commit-group-title {
+        color: #eee;
+    }
+
+    .commit-group.table-list {
+        background-color: #345;
+    }
+
+    .commit .commit-title,
+    .commit .commit-title a {
+        color: #cdd;
+    }
+
+    .commit .commit-title .issue-link {
+        color: #6CC644;
+    }
+
+    .commits-comments-link {
+        color: #fff;
+    }
+
+    .commits-comments-link:hover {
+        color: #6CC644;
+    }
+
+    .hidden-text-expander a {
+        background-color: #789;
+    }
+
+    .hidden-text-expander a:hover {
+        background-color: #6CC644;
+    }
+
+    .commits-list-item.navigation-focus {
+        background: #567;
+    }
+
+    .commits-list-item .commit-meta {
+        color: #ddd;
+    }
+
+    .commits-list-item .commit-author {
+        color: #6CC644;
+    }
+
+    .commits-list-item .commit-desc pre {
+        color: #bcc;
+        border-left: 1px solid #6c6;
+    }
+
+    .commit-link {
+        color: #6CC644;
+    }
+
+    .commit-id {
+        color: #eee;
+    }
+
+    .commit-id:hover {
+        color: #6CC644;
+    }
+
+    .commit-group-title .octicon-git-commit {
+        color: #fff;
+        background: none;
+    }
+
+    .timeline-comment-wrapper {
+        border-top: 2px solid transparent;
+        border-bottom: 2px solid transparent;
+    }
+
+    .timeline-comment-header {
+        color: #ddd;
+        background-color: #345;
+        border-bottom: 1px solid #789;
+        border-radius: 6px 6px 0 0;
+    }
+
+    .timeline-comment.current-user .timeline-comment-header {
+        background-color: #456;
+        border-bottom-color: #DDE4E6;
+    }
+
+    .timeline-comment.current-user .previewable-comment-form .comment-form-head.tabnav {
+
+        /* color: #8E9597; */
+        background-color: #456;
+        border-bottom-color: #789;
+    }
+
+    .timeline-comment-header-text code a {
+        color: #aaa;
+    }
+
+    .timeline-comment-header .author {
+        color: #6CC644;
+    }
+
+    .timeline-comment {
+        background-color: #567;
+        border: 1px solid #678;
+        border-radius: 7px;
+        box-shadow: 0 0 4px #444;
+    }
+
+    .timeline-comment.current-user {
+        border-color: #BFCCD1;
+        box-shadow: 0 0 4px #8f0;
+    }
+
+    .timeline-comment-avatar {
+        border-radius: 24px;
+    }
+
+    .timeline-comment-wrapper > .timeline-comment::before,
+    .timeline-new-comment .timeline-comment::before {
+        border-right-color: #89a;
+        border-width: 8px;
+    }
+
+    .timeline-comment-wrapper > .timeline-comment::after,
+    .timeline-new-comment .timeline-comment::after {
+        border-width: 7px;
+        border-right-color: #345;
+        margin-top: 1px;
+        margin-left: 2px;
+    }
+
+    .timeline-comment-wrapper > .timeline-comment.current-user::before,
+    .timeline-new-comment .timeline-comment.current-user::before {
+        border-right-color: #eee;
+    }
+
+    .timeline-comment-wrapper > .timeline-comment.current-user::after,
+    .timeline-new-comment .timeline-comment.current-user::after {
+        border-right-color: #456;
+    }
+
+    .new-discussion-timeline .previewable-comment-form .comment-form-head.tabnav {
+        background: #345 none repeat scroll 0% 0%;
+        padding: 6px 10px 0px;
+        border-radius: 6px 6px 0px 0px;
+    }
+
+    .timeline-comment-action {
+        color: #fff;
+        opacity: 0.8;
+    }
+
+    .btn-link.timeline-comment-action.delete-button {
+        color: #F00;
+    }
+
+    .timeline-comment-action:hover {
+        color: #6CC644;
+    }
+
+    /**************************************************/
+
+    /* BRANCH ACTIONS AND MERGING */
+
+    /**************************************************/
+
+    .range-editor {
+        background-color: #135;
+        border: 1px solid #E5E5E5;
+        border-radius: 3px;
+    }
+
+    .range-editor-icon {
+        color: #ccc;
+    }
+
+    .recently-touched-branches {
+        color: #ddd;
+        background-color: #235;
+        border: 1px solid #6CC644;
+        border-radius: 3px;
+    }
+
+    .recently-pushed-branch-details a {
+        color: #6CC644;
+    }
+
+    .branch-action-body {
+        background-color: #234;
+        border: 1px solid #6CC644;
+        border-radius: 3px;
+    }
+
+    .branch-action-body .merge-message,
+    .branch-action-body .merge-branch-form {
+        background-color: #567;
+        border-top: 1px solid #6CC644;
+        border-bottom-right-radius: 2px;
+        border-bottom-left-radius: 2px;
+    }
+
+    .branch-action-body::after {
+        border-right-color: #6CC644;
+    }
+
+    .branch-action-state-unknown .branch-action-body,
+    .branch-action-state-unstable .branch-action-body {
+
+        /*         border-color: #E2CC7A; */
+        border-color: #E2DC5A;
+    }
+
+    .build-status-item {
+        background-color: #345;
+        border-bottom: 1px solid #789;
+    }
+
+    .merge-branch-description {
+        color: #ccc;
+    }
+
+    .commit-ref {
+        border-radius: 3px;
+        color: #cde;
+        background-color: #234;
+        border: 1px solid #789;
+    }
+
+    .merge-pr-more-commits {
+        color: #ccc;
+    }
+
+    .merge-branch-manually .copyable-terminal {
+        background-color: #234;
+    }
+
+    .status-meta {
+        color: #ccc;
+    }
+
+    .new-discussion-timeline .closed-banner {
+        background: none;
+        border-radius: 0px;        /* border-top: 1px solid #fff; */
+        border-bottom: none;
+    }
+
+    /* COMMIT INFO */
+    .full-commit {
+        background: #234;
+        border: 1px solid #789;
+        border-radius: 3px;
+    }
+
+    .full-commit p.commit-title {
+        color: #fff;
+    }
+
+    .commit-branches {
+        color: inherit;
+    }
+
+    .full-commit .branches-list li {
+        color: inherit; /*#596063;*/
+    }
+
+    .full-commit .btn-outline {
+
+        /*         background: transparent none repeat scroll 0% 0%; */
+        border: 1px solid #CEDEE5;
+    }
+
+    .full-commit .btn-outline:hover {
+        color: #fff;
+        border: 1px solid #fff;
+    }
+
+    .commit-author-section {
+        color: #ccc;
+    }
+
+    .full-commit .sha-block {
+        color: #ddd;
+    }
+
+    .full-commit .sha-block > .sha {
+        color: #fff;
+    }
+
+    .full-commit .commit-meta {
+        background: #345;
+        border-top: 1px solid #789;
+        border-bottom-right-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+
+    /**************************************************/
+
+    /* POPUPS */
+
+    /**************************************************/
+
+    .facebox-popup {
+        background-color: #456;
+        border: 1px solid rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        box-shadow: 0px 0px 18px rgba(0, 0, 0, 0.4);
+    }
+
+    /**************************************************/
+
+    /* EXPERIMENTAL LAYOUT */
+
+    /**************************************************/
+    .menu {
+        background-color: #345;
+        border: 1px solid #789;
+    }
+
+    .menu-item {
+        text-shadow: none;
+        border-bottom: 1px solid #789;
+    }
+
+    .menu-item:hover {
+        background-color: #456;
+        color: #fff
+    }
+
+    .menu-item.selected {
+        color: #fff;
+        cursor: default;
+        background-color: #567;
+    }
+
+    .menu-item.selected::before {
+        width: 3px;
+        background-color: #6CC644;
+    }
+
+    .repohead.experiment-repo-nav {
+        background-color: #012;
+    }
+
+    .reponav-item {
+        color: #bbb;
+    }
+
+    .reponav-item:hover {
+        color: #fff;
+    }
+
+    .reponav-item .octicon {
+        color: #bbb;
+    }
+
+    .reponav-item:hover .octicon {
+        color: #fff;
+    }
+
+    .reponav-item .counter {
+        background-color: #bbb;
+        color: #333;
+    }
+
+    .reponav-item.selected .counter,
+    .reponav-item:hover .counter {
+        background-color: #fff;
+    }
+
+    .reponav-item.selected {
+        color: #fff;
+        background-color: #456;
+        border-color: #6CC644 #E5E5E5 transparent;
+    }
+
+    .reponav-item.selected:hover {
+        color: #fff;
+    }
+
+    .blog-aside .rss {
+        color: #fff;
+    }
+
+    .blog-aside .rss .octicon {
+        color: #6CC644; /* #FF712C */
+    }
+
+    .blog-title {
+        color: #fff;
+    }
+
+    .blog-post-meta {
+        color: #ccc;
+    }
+
+    .blog-post-meta a {
+        color: #6CC644;
+    }
+
+    .blog-content {
+        width: 735px;
+        font-family: "Helvetica Neue", Helvetica, Arial, freesans, sans-serif;
+        background: #345;
+        padding: 2em;
+        border-radius: 1em;
+        border: 1px solid #789;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    }
+
+    .blog-post-body {
+        color: #fff;
+    }
+
+    .blog-feedback {
+        margin: 50px 0px;
+        background-color: #234;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #789;
+        border-radius: 3px;
+        box-shadow: 0 0 0.5em rgba(0, 0, 0, 0.3);
+    }
+
+    .blog-feedback-header {
+        border-bottom: 1px solid #789;
+        box-shadow: none;
+    }
+
+}

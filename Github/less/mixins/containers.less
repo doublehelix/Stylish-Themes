@@ -24,7 +24,7 @@
 }
 
 .pagehead-tabs-item.selected {
-    color: #222;
+    color: @text-lightest; //#333;
     background-color: @bg-light;
     border-top: 2px solid @nav-item-selection;
     border-color: @nav-item-selection #abc transparent;
@@ -40,8 +40,8 @@
 }
 
 .menu-heading {
-    color: #eee;
-    background-color: #234;
+    color: @text-light; //#eee;
+    background-color: @bg-dark;
     border-bottom: 1px solid #789;
 }
 
@@ -51,7 +51,7 @@
 }
 
 .boxed-group-inner {
-    background: #345;
+    background: @bg-darker;
     border: 1px solid #ccc;
     border-bottom-left-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -60,7 +60,7 @@
 
 .boxed-group-inner .help {
     border-top: 1px solid #DDD;
-    color: #ccd;
+    color: @text-default;
 }
 
 .boxed-group-list .access-level {
@@ -102,4 +102,13 @@
 
 .oauth-permissions-details .permission-summary .access-details {
     color: #ddd;
+}
+
+.member-badge {
+    color: @link-default;
+    border-top: 1px solid #eee;
+
+    .octicon {
+        color: @text-light;
+    }
 }
