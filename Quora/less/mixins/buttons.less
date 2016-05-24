@@ -1,0 +1,28 @@
+.ActionBar .primary_action {
+    transition: opacity ease-in-out 100ms,color ease-in-out 100ms,background-color ease-in-out 100ms,border-color ease-in-out 100ms;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(0,0,0,0.2);
+    padding: 3px 7px 4px 7px;
+    background: @button-default; //@bg-extra-dark; // #f1f8fb;
+    color: #2b6dad;
+    border: 1px solid #bbcadc;
+
+    .count,
+    &:focus .count,
+    &:hover .count {
+        color: @text-lightest;
+    }
+
+    &:focus,
+    &:hover {
+        border: @border-light;
+        color: @text-lightest;
+    }
+}
+
+.WriteAnswer {
+    transition: opacity ease-in-out 100ms,color ease-in-out 100ms,background-color ease-in-out 100ms,border-color ease-in-out 100ms;
+    border-radius: 3px;
+    box-shadow: 0 1px 1px 0 rgba(200,200,200,0.2);
+    background: @button-highlight; // #f1f8fb;
+}

@@ -1,0 +1,147 @@
+body { }
+
+.header_content {
+    color: @text-light !important;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.SiteHeader {
+    background: @bg-extra-dark;
+}
+
+.SiteHeader .SiteHeaderNavItem .nav_item_link.hover, .SiteHeader .SiteHeaderNavItem .nav_item_link:hover, .SiteHeader .SiteHeaderNavItem .nav_item_link:active {
+    text-decoration: none;
+    background-color: @bg-lightest;
+    opacity: 1;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color: @text-default;
+}
+
+a,
+a span {
+    color: @link-default;
+}
+
+a:visited,
+a:visited span {
+    color: @link-visited;
+}
+
+
+.ProfileNameAndSig h1 {
+    color: @text-light;
+    text-shadow: 0 0 4px rgba(0,0,0,0.5);
+}
+
+.rendered_qtext a.external_link,
+.expanded_q_text a.external_link,
+.suggested_edits_text a.external_link,
+.qtext_editor_content a.external_link,
+.inline_editor_content a.external_link {
+    color: @link-light;
+    text-decoration: underline;
+}
+
+.feed_item {
+    color: @text-light;
+
+    .truncated_q_text .qlink_container a {
+        color: @link-default;
+    }
+}
+
+a.question_link span,
+.feed_item .question_link,
+.feed_item .BoardItemTitle {
+    color: @link-light;
+}
+
+.feed_item .more_link,
+a.more_link,
+a.more_link:visited {
+    color: @link-alternate;
+}
+
+.HomeNavList {
+    color: @text-default;
+
+    .title {
+        color: @text-lightest;
+    }
+}
+
+.EventHeader {
+    color: @text-default;
+}
+
+.CredibilityFact {
+    color: @text-highlight;
+}
+
+.ContentHeader {
+
+    .feed_item_answer_user .IdentitySig,
+    .feed_item_board .board_author_name .IdentitySig
+    {
+        color: @text-lowlight;
+    }
+
+    .feed_item_answer_user .user,
+    .feed_item_answer_user .anon_user,
+    .feed_item_board .board_author_name .user,
+    .feed_item_board .board_author_name .anon_user
+    {
+        color: @link-light;
+    }
+}
+
+.ContentFooter {
+    color: @text-default;
+
+    a {
+        color: @link-alternate;
+    }
+}
+
+.ObjectCard .ObjectCard-body {
+    color: @text-default;
+}
+
+.feed_type_answer .TruncatedAnswer,
+.feed_type_question .TruncatedAnswer,
+.AnswerListItem .TruncatedAnswer,
+.feed_type_answer .ExpandedAnswer,
+.feed_type_question .ExpandedAnswer,
+.AnswerListItem .ExpandedAnswer
+{
+    // font-family: 'Open Sans', 'Ubuntu', sans-serif, helvetica, arial, verdana;
+    font-family: 'Open Sans', consolas, sans-serif, helvetica, arial, verdana;
+}
+
+blockquote {
+    .rendered_qtext &,
+    .expanded_q_text &,
+    .suggested_edits_text &,
+    .qtext_editor_content &,
+    .inline_editor_content &
+    {
+        color: @text-quoted;
+    }
+}
+
+.ObjectCard .ObjectCard-header .user,
+.ObjectCard .ObjectCard-header .topic_name,
+.ObjectCard .ObjectCard-header .BoardName,
+.ObjectCard .ObjectCard-header .sig {
+    color: @link-default;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.feed_ama_taking_questions_story .cta {
+    color: @link-light;
+}

@@ -3,6 +3,46 @@
 /**************************************************/
 
 
+.release-meta,
+.release-body {
+    border: 1px solid @border-default;
+    margin-top: 1.5em;
+}
+
+.release-body {
+    background: @bg-default;
+    border-radius: 0 12px 12px 12px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+}
+
+.release-meta {
+    border-radius: 8px 0 0 8px;
+    border-right: none;
+    background: @bg-darker;
+
+    .tag-references {
+    }
+}
+
+.release-body-form {
+    // border: 1px solid @border-default;
+    background: @bg-default;
+    border-radius: 8px 8px 4px 4px;
+    box-shadow: 3px 3px 12px rgba(0, 0, 0, 0.5);
+
+    .previewable-comment-form .write-content,
+    .previewable-comment-form .preview-content {
+        padding-bottom: 0;
+    }
+}
+
+.release.label-latest {
+    .release-body {
+        box-shadow: 1px 1px 8px @button-default;
+    }
+}
+
+
 .release-authorship {
     color: @text-default;
 

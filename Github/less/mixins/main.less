@@ -27,14 +27,15 @@ body {
     }
 }
 
-.header {
+.header,
+.site-header {
     background-color: @bg-dark;
     border-bottom: 1px solid @border-light;
     color: #ddd;
 }
 
 .site-footer {
-    color: #ccc;
+    color: @text-default;
 }
 
 .repohead h1 {
@@ -42,7 +43,7 @@ body {
 }
 
 .header-logo-wordmark {
-    color: #fff;
+    color: @text-lightest;
 }
 
 .header-logo-wordmark:hover {
@@ -238,6 +239,12 @@ a.tabnav-extra:hover { color: @link-default; }
     color: @text-default !important;
 }
 
+
+.table-list {
+    background-color: @bg-darker;
+}
+
+
 .repository-meta {
     color: @text-light; //#ddd;
 }
@@ -250,6 +257,14 @@ a.tabnav-extra:hover { color: @link-default; }
     margin: 1em -1em;
 }
 
+.repo-list-item .repo-list-stats,
+.repo-list-item .repo-list-name,
+.repo-list-item .repo-list-description,
+.repo-list-item .repo-list-meta {
+    z-index: 2;
+    position: relative;
+}
+
 .repo-list .participation-graph {
     // position: absolute;
     // right: 0;
@@ -257,9 +272,10 @@ a.tabnav-extra:hover { color: @link-default; }
     left: 1em;
     z-index: 1;
     color: @link-default-light;
+    opacity: 0.2 !important;
 
     .bars {
-        opacity: 0.2 !important;
+        // opacity: 0.2 !important;
 
         rect {
             fill: @link-default-light !important;
@@ -270,11 +286,13 @@ a.tabnav-extra:hover { color: @link-default; }
 .private .mini-repo-list-item {
     background-color: @bg-darker;
 }
+
 .mini-repo-list-item {
     .repo-description,
     .repo-icon,
     .stars {
         color: @text-light;
+        fill: currentColor;
     }
 }
 
@@ -333,16 +351,28 @@ input.input-contrast:focus,
     color: #fff
 }
 
+.site-header-nav-main .nav-item {
+    border-top: 0;
+    border-bottom: 4px solid transparent;
+}
+.site-header-nav .nav-item {
+    color: @link-dim;
+
+    &:hover {
+        color: @link-light; //@nav-item-selection
+    }
+}
+
 .pagehead-nav-item {
-    color: #ccc;
+    color: @link-dim;
 }
 
 .pagehead-nav-item:hover {
-    color: #fff;
+    color: @link-light;
 }
 
 .pagehead-nav-item.selected {
-    color: #fff;
+    color: @link-light;
     border-bottom: 3px solid @nav-item-selection;
 }
 

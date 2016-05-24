@@ -1,0 +1,41 @@
+{
+  "name": "Quora-dark-blues-transparent",
+  "title": "Quora Dark Blues Transparent",
+  "version": "0.1.0",
+  "homepage": "http://",
+  "description": "Quora Transparent Dark Blues Theme.",
+  "private": true,
+  "author": {
+    "name": "Neurotechnics",
+    "url": "https://www.neurotechnics.com"
+  },
+  "contributors": [
+    {
+      "name": "James Price",
+      "email": "jprice@neurotechnics.com"
+    }
+  ],
+  "licenses": [
+    {
+      "type": "Apache-2.0"
+    }
+  ],
+  "bugs": {
+    "url": "http://mantis.neurotechnics.com/",
+    "email": "support@neurotechnics.com"
+  },
+  "repository": {
+    "type": "svn",
+    "url": "https://github.com/doublehelix/Stylish-Themes"
+  },
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-cssmin": "^0.14.0",
+    "grunt-contrib-less": "^1.1.0",
+    "load-grunt-config": "^0.19.1",
+    "load-grunt-tasks": "^3.3.0",
+    "matchdep": "^1.0.0"
+  }
+}

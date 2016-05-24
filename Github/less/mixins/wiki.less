@@ -159,3 +159,75 @@
 #suggestions a {
     color: @link-default; //#666;
 }
+
+.prose-diff .changed ins,
+.prose-diff .changed ins code,
+.prose-diff .changed ins pre,
+.prose-diff .changed .added {
+    background: #3A9F6A; // #eaffea;
+}
+
+/* Editor */
+
+.gollum-editor .form-control {
+    color: #6f6; //#333;
+    background-color: #333; //#fff;
+    background-repeat: no-repeat;
+    background-position: right 8px center;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    outline: none;
+    box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
+}
+
+/* PREVIEW */
+
+.previewable-comment-form .write-content,
+.previewable-comment-form .preview-content {
+    display: none;
+    padding: 0 0 10px;
+    margin: 0 10px;
+}
+
+.previewable-comment-form.write-selected .write-content,
+.previewable-comment-form.preview-selected .preview-content {
+    display: block;
+}
+
+.wiki-wrapper .wiki-content .previewable-comment-form.write-selected .write-content,
+.wiki-wrapper .wiki-content .previewable-comment-form.preview-selected .preview-content {
+    padding: 1em;
+    margin: 0;
+    background: @bg-dark;
+    border-radius: 1em;
+    border: 1px solid @border-default;
+}
+
+.markdown-body {
+}
+
+.wiki-body .markdown-body {
+    padding: 1em;
+    margin: 0;
+    background: @bg-dark;
+    border-radius: 0.8em 0.8em 0 0;
+    border: 1px solid @border-default;
+    border-bottom: none;
+}
+
+.wiki-wrapper {
+    .wiki-content .markdown-body {
+    }
+
+    .wiki-footer {
+        margin: 0;
+        border-radius: 0 0 0.4em 0.4em;
+        border: 1px solid @border-default;
+
+        .markdown-body {
+            margin: 0;
+            border-radius: 0 0 0.4em 0.4em;
+            border: none; //1px solid @border-default;
+        }
+    }
+}
