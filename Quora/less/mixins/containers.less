@@ -43,3 +43,51 @@
 .BrowserWarning > div {
     background: @bg-dark; // #f6f6f6;
 }
+
+
+.toggle_modal_inline {
+    border: none;
+
+    &.hover_highlight:hover {
+        background-color: @bg-light;
+        border: none;
+    }
+}
+
+.modal_overlay {
+    &.feed_desktop_modal {
+        background: rgba(0, 0, 0, 0.7); // rgba(240, 240, 240, 0.9) none repeat scroll 0 0;
+        // z-index: 1199;
+    }
+    .modal_wrapper {
+        background: @bg-extra-dark-opaque; // @bg-extra-dark; // #fff none repeat scroll 0 0;
+        color: @text-default;
+        border: @border-dark;
+    }
+}
+
+.AnswerPageViewMoreLink {
+    background-color: @bg-extra-dark; // #fcfcfc;
+    border: 1px solid #efefef;
+    // border-radius: 3px;
+    // margin-bottom: 32px;
+    // margin-top: 16px;
+    // padding-bottom: 0;
+
+    .view_more_link:hover {
+        background: @bg-default;
+    }
+}
+
+.ActionBar.sticky {
+    background: @bg-default-opaque; // #fff none repeat scroll 0 0;
+    // border: 1px solid #dfdfdf;
+    // border-bottom: none;
+    // box-shadow: 0 -3px 2px -2px rgba(200, 200, 200, 0.3);
+    // width: 602px;
+    width: 100%;
+    left: 0;
+    padding-left: 2em;
+    padding-right: 2em;
+    box-sizing: border-box;
+}

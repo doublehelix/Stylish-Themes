@@ -1,0 +1,26 @@
+
+.js-graph {
+    background: @bg-dark;
+    border: 1px solid @border-default;
+    border-radius: 4px;
+    padding-left: 10px;
+    overflow: hidden;
+
+    .label {
+        color: @text-default;
+    }
+
+    .day-name {
+        fill: @text-default;
+        padding-left: 10px;
+    }
+
+    circle.day {
+        fill: @text-default;
+        stroke-width: 0;
+
+        &:hover {
+            fill: @link-default;
+        }
+    }
+}

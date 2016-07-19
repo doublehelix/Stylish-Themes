@@ -133,7 +133,7 @@
 
     &.current-user {
         border-color: #BFCCD1;
-        box-shadow: 0 0 4px #8f0;
+        box-shadow: 0 0 4px @border-highlight;
 
         .timeline-comment-header {
             background-color: @bg-default;
@@ -211,3 +211,19 @@
     color: #F00;
 }
 
+
+.comment-reactions .user-has-reacted {
+    background-color: @button-default;
+}
+
+
+/**************************************************/
+/* NOTES / Task Lists etc. */
+/**************************************************/
+
+.reorderable-task-lists .markdown-body .task-list-item.hovered {
+    background: @bg-dark;
+    border-top-color: @border-default;
+    border-bottom-color: @border-default;
+    box-shadow: 0 0 5px @border-success;
+}

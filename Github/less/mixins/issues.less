@@ -1,4 +1,31 @@
 /**************************************************/
+/* Issues List */
+/**************************************************/
+.Box-body {
+    background-color: @bg-dark;
+}
+
+.Box-body-row {
+    border-top: 1px solid #eee;
+
+    &.unread {
+        // box-shadow: 2px 0 0 #4078c0 inset;
+        box-shadow: 3px 0 0 @border-success inset;
+    }
+}
+
+.Box-body-row--highlight {
+    &.navigation-focus {
+        background-color: @bg-default; // #f5f5f5;
+    }
+
+    .Box-row-link {
+        color: @text-light;
+    }
+}
+
+
+/**************************************************/
 /* General */
 /**************************************************/
 .signed-out-comment {
@@ -160,9 +187,3 @@
 .merge-branch-heading {
     color: @text-light; //#333;
 }
-
-
-.comment-reactions .user-has-reacted {
-    background-color: @button-default;
-}
-

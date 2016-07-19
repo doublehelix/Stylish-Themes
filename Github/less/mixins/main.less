@@ -125,6 +125,16 @@ body {
     padding-bottom: 24px;
 }
 
+.discussion-sidebar {
+    padding: 0.8em;
+    border: 1px solid @border-default;
+    border-radius: 0.4em;
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    background: @bg-extra-dark;
+    width: 220px
+}
+
 .discussion-timeline-actions {
    border-top: 2px solid transparent;
    background: transparent;
@@ -235,7 +245,7 @@ a.tabnav-extra:hover { color: @link-default; }
     color: @link-light;
 }
 
-.text-muted {
+.text-muted, .text-gray {
     color: @text-default !important;
 }
 
@@ -397,3 +407,4 @@ input.input-contrast:focus,
 .state-open, .state-proposed, .state-reopened { background-color: @button-default; color: @link-light; }
 .state-closed { background-color: #DD2C00; }
 .state-merged { background-color: #6E5494; border: 1px solid #9e84c4; }
+
