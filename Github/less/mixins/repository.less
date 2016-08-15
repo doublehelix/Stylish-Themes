@@ -2,6 +2,37 @@
 /* MAIN REPO */
 /**************************************************/
 
+.new-repo-container {
+    background: @bg-dark;
+    border: 1px solid @border-dark;
+    border-radius: 4px;
+    padding: 1em;
+    margin-bottom: 2em;
+}
+
+.owner-select-target {
+    background-color: @bg-extra-dark; // #f2f2f2;
+    color: @text-light;
+    box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.RecentBranches {
+    background-color: @bg-extra-dark; // #fff9ea;
+    border: 1px solid @border-highlight; // #dfd8c2;
+
+    &-item {
+        color: @text-default; // #a19e7f;
+
+        &-link {
+            color: @link-light; // #6b694f;
+        }
+    }
+
+    .octicon {
+        color: @link-light;
+    }
+}
+
 .user-mention,
 .team-mention {
     color: @link-light;

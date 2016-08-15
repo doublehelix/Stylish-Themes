@@ -19,9 +19,13 @@ body {
     box-shadow: 0px 3px 100px 20px rgba(0, 0, 0, 0.15);
 }
 
-.home-page .user-panel {
-    background: @bg-user-panel;
-    box-shadow: 0 0 12px #000;
+.home-page {
+    background: @bg-body; // #f6f6f6;
+
+    .user-panel {
+        background: @bg-user-panel;
+        box-shadow: 0 0 12px #000;
+    }
 }
 
 a {
@@ -30,5 +34,52 @@ a {
     &:hover,
     &:focus {
         color: @link-hover;
+    }
+}
+
+.project-list-container {
+    .project-list-item {
+        background: @bg-cards; // #fefefe none repeat scroll 0 0;
+        box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+        &:hover, &:focus {
+            background: lighten(@bg-cards, 10%);
+            box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.8);
+        }
+    }
+}
+
+.repo-icon {
+    color: @text-light; // #525252;
+}
+
+.btn-pin.pinned {
+    i {
+        color: @link-default; // #968cc6;
+    }
+
+    &:hover i {
+        color: @link-hover; // #968cc6;
+    }
+}
+
+
+/***** REPO CHOOSER *****/
+
+.github-repo-chooser {
+    background-color: @bg-cards; // #fefefe
+
+    .sources-container {
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3); // #e6e6e6;
+
+        .source {
+            border-top: 1px solid #e6e6e6;
+            color: @text-light; // #979797;
+
+            &:hover {
+                background-color: lighten(@bg-cards, 10%);
+                color: @text-light; // #979797;
+            }
+        }
     }
 }
