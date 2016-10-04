@@ -84,17 +84,26 @@
     color: @link-default;
 }
 
-.numbers-summary .octicon {
-    color: @text-light;
+
+.numbers-summary {
+    background: @bg-dark;
+
+    .octicon {
+        color: @text-light;
+    }
+
+    a:hover {
+        color: @link-default;
+    }
+
+    a,
+    .nolink {
+        color: #ddd;
+    }
 }
 
-.numbers-summary a:hover {
-    color: @link-default;
-}
-
-.numbers-summary a,
-.numbers-summary .nolink {
-    color: #ddd;
+.repository-lang-stats-numbers {
+    background: @bg-extra-dark;
 }
 
 .repo-list-stats .repo-list-stat-item {
@@ -162,12 +171,8 @@ table.files {
     color: #eee;
 }
 
-.discussion-item.discussion-commits {
-    background: @bg-default;
-    // padding: 1em 4em;
-    // margin: 0 0 0 4em;
-    border: 1px solid @border-dark;
-    border-radius: 8px;
+.discussion-item {
+    // position: relative;
 }
 
 .discussion-item,
@@ -178,6 +183,14 @@ table.files {
     padding-top: 7px;
     padding-bottom: 7px;
     padding-right: 1em;
+}
+
+.discussion-item.discussion-commits {
+    margin: 15px 0 15px 79px;
+    padding-left: 45px;
+    background: @bg-darker;
+    border: 1px solid @border-dark;
+    border-radius: 8px;
 }
 
 .discussion-item-changes-marker {

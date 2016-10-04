@@ -2,12 +2,6 @@
 /*************** BUTTONS AND LINKS ****************/
 /**************************************************/
 
-a {
-
-    /* color: #70A8F0; */
-    color: @link-default;
-}
-
 .branch-name {
     background-color: @bg-dark;
     border: 1px solid @border-default;
@@ -16,9 +10,20 @@ a {
     // border-radius: 3px;
 }
 
-a.branch-name {
-    color: #fff;
+a {
+    /* color: #70A8F0; */
+    color: @link-default;
+
+    &.branch-name {
+        color: #fff;
+    }
+
+    &.text-gray-light,
+    &.link-gray-dark {
+        color: @link-default !important; // #333 !important;
+    }
 }
+
 
 .btn {
     color: @link-light;

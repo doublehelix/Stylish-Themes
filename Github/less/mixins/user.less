@@ -106,3 +106,110 @@ a.text-gray-dark,
         top: -12px;
     }
 }
+
+.profilecols > .column.one-fourth {
+    padding: 1em;
+    background: @bg-dark;
+    border: 1px solid @border-default;
+    border-radius: 0.4em;
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.5);
+    // box-sizing: border-box;
+    width: 24%;
+    margin-right: 1%;
+}
+
+.pinned-repo-item {
+    background-color: @bg-dark;
+}
+
+.vcard-names-container,
+.vcard-details {
+    background-color: @bg-dark;
+    border: 1px solid @border-medium;
+    border-radius: 4px;
+    padding-left: 10px;
+}
+.vcard-names-container {
+    margin-top: 10px;
+}
+
+.vcard-details {
+    &.border-top {
+        border-top: none;
+    }
+
+    &.border-gray-light {
+        border-color: @border-medium !important;
+    }
+}
+
+.user-profile-sticky-bar::after {
+    background-color: @bg-dark-opaque;
+}
+
+.user-profile-nav {
+    // background: none;
+    background: @bg-dark-opaque;
+    .underline-nav-item {
+        color: @text-light;
+    }
+}
+
+.user-profile-bio {
+    color: @text-default;
+    background-color: @bg-darker;
+    border: 1px solid @border-default;
+    border-radius: 4px;
+    margin-top: 8px;
+    padding-left: 10px;
+}
+
+.underline-nav-item.selected {
+    border-bottom-color: @nav-item-selection; // #c9510c;
+}
+
+.js-repo-list,
+.js-repo-filter {
+    .border-bottom {
+        border: none !important;
+    }
+    .border-gray-light {
+        background: @bg-dark;
+        border: 1px solid @border-light !important;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .link-gray-dark {
+        color: @link-default !important;
+    }
+}
+
+.profile-timeline-year-list.bg-white {
+    background: none !important;
+}
+
+.profile-timeline-card.bg-white {
+    background: @bg-dark;
+}
+
+// .profile-timeline.discussion-timeline .profile-timeline-month-heading::after,
+.profile-timeline-month-heading.bg-white
+{
+    background-color: @bg-dark !important;
+    border: 1px solid @border-dark;
+    border-radius: 4px;
+    padding-left: 4px;
+}
+
+.profile-timeline-card-wrapper {
+    border-bottom: none; // 2px solid #fff;
+    border-top: none; // 2px solid #fff;
+}
+
+.js-contribution-graph .border-gray-dark {
+    background-color: @bg-darker;
+    // border: 1px solid @border-default;
+    // border-radius: 4px;
+}

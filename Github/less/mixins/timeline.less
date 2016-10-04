@@ -109,6 +109,16 @@
     background: none;
 }
 
+.discussion-timeline {
+    width: 80%; // 760px;
+
+    &::before {
+        background: transparent; // #f3f3f3;
+        content: none; //"";
+        width: 0; //2px;
+    }
+}
+
 .timeline-comment-wrapper {
     border-top: 2px solid transparent;
     border-bottom: 2px solid transparent;
@@ -129,7 +139,7 @@
     background-color: @bg-medium;
     border: 1px solid @border-dark;
     border-radius: 7px;
-    box-shadow: 0 0 4px #444;
+    // box-shadow: 0 0 4px #444;
 
     &.current-user {
         border-color: #BFCCD1;
@@ -205,6 +215,10 @@
     &:hover {
         color: @link-default;
     }
+}
+
+.review-comment {
+    background: @bg-dark;
 }
 
 .btn-link.timeline-comment-action.delete-button {

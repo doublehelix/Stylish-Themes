@@ -101,20 +101,25 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.075);
 }
 
-.setup-wrapper .oauth-permissions-details {
+
+.setup-wrapper .oauth-permissions-details,
+.oauth-wrapper .setup-wrapper .oauth-permissions-details {
     background-color: @bg-dark;
 }
 
-.oauth-permissions-details .permission-title {
-    color: @link-light;
-}
+.oauth-permissions-details {
+    .permission-title {
+        color: @link-light;
+    }
 
-.oauth-permissions-details .mega-octicon {
-    color: #ddd;
-}
+    .octicon,
+    .mega-octicon {
+        color: #ddd;
+    }
 
-.oauth-permissions-details .permission-summary .access-details {
-    color: #ddd;
+    .permission-summary .access-details {
+        color: #ddd;
+    }
 }
 
 .member-badge {
@@ -123,5 +128,23 @@
 
     .octicon {
         color: @text-light;
+    }
+}
+
+.tutorial {
+    background-color: @bg-extra-dark-opaque; // #fff;
+    border: 1px solid #fff; // rgba(0, 0, 0, 0.15);
+    // border-radius: 4px;
+    // box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+.review-thread-reply {
+    background-color: @bg-default; // #fafafa;
+    // border-radius: 0 0 3px 3px;
+    border-top: 1px solid #e5e5e5;
+    // padding: 6px 12px;
+
+    .inline-comment-form {
+        background-color: @bg-light; // fff;
     }
 }
