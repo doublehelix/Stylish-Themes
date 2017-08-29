@@ -9,6 +9,7 @@
 
 .h-card,
 .org-repos li.d-block,
+.d-block.width-full,
 .js-repo-meta-container .repository-meta.js-details-container
 {
     color: @text-light;
@@ -16,7 +17,11 @@
     background: @bg-extra-dark;
     border: 1px solid @border-default !important;
 }
-.org-repos li.d-block { margin-bottom: 1em; }
+.org-repos li.d-block,
+.d-block.width-full
+{
+    margin-bottom: 1em;
+}
 
 // Extra-dark background with default text
 .simple-box,

@@ -1,0 +1,41 @@
+.octotree_github_sidebar {
+    background: @bg-extra-dark-opaque;
+
+    .octotree_views {
+        background: none;
+
+        .octotree_view .octotree_view_header {
+            background: @bg-extra-dark-opaque; // none rgb(250, 251, 252);
+            // border-right: 1px solid rgb(225, 228, 232);
+            // border-bottom: 1px solid rgb(225, 228, 232);
+        }
+
+        .octotree_treeview {
+            .jstree-default {
+                .jstree-wholerow-clicked,
+                .jstree-wholerow-hovered {
+                    background: @bg-highlight; // rgb(219, 238, 255);
+                }
+            }
+            .jstree-anchor {
+                color: @text-default !important;
+            }
+        }
+    }
+
+    a.octotree_toggle, a.octotree_opts {
+        color: @text-light !important;
+    }
+}
+.octotree_views {
+    .octotree_treeview {
+        .jstree-default {
+            .jstree-icon,
+            .jstree-icon:empty,
+            .jstree-anchor {
+                color: @text-light !important;
+            }
+        }
+    }
+}
+

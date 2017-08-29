@@ -1,0 +1,42 @@
+.menu-heading {
+    background: @bg-extra-dark-opaque;
+    color: @text-light;
+}
+.menu {
+    background: @bg-dark; // #fff;
+    // border: 1px solid #d1d5da;
+}
+
+.menu-item {
+    &:hover {
+        background: @bg-highlight;
+    }
+    &.selected {
+        background: @bg-highlight;
+        color: @text-light;
+        &::before {
+            width: 4px;
+            background-color: @accent-color;
+        }
+    }
+}
+
+.Subhead,
+.input-label,
+{
+    color: @text-light !important;
+}
+
+.listgroup {
+    background: @bg-dark;
+}
+
+.listgroup-item,
+.access-token .token-description,
+{
+    color: @text-light;
+}
+
+.token-scope {
+    color: @text-light;
+}
