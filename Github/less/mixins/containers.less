@@ -1,150 +1,270 @@
-/**************************************************/
-/* CONTAINERS */
-/**************************************************/
+// ****************************************
+// * GENERAL
+// ****************************************
+.bg-white,
+.thread-subscription-status,
+{
+    background: none !important;
+}
 
-.org-header {
+.h-card,
+.org-repos li.d-block,
+.js-repo-meta-container .repository-meta.js-details-container
+{
+    color: @text-light;
+    padding: 0.8em;
+    background: @bg-extra-dark;
+    border: 1px solid @border-default !important;
+}
+.org-repos li.d-block { margin-bottom: 1em; }
+
+// Extra-dark background with default text
+.simple-box,
+{
+    background: @bg-extra-dark;
     color: @text-default;
-    border-bottom: 1px solid #EEE;
-    background-color: @bg-dark;
 }
 
-.org-name {
-    color: @link-light;
+
+// ****************************************
+// * HEADERS
+// ****************************************
+.orghead,
+.repohead.experiment-repo-nav {
+    background: @bg-extra-transparent;
+    color: @text-light;
 }
 
-.pagehead-tabs-item {
-    color: #ccc;
-    border: 1px solid #abc;
-    border-bottom: transparent;
-    margin: 0 5px 0 0;
+
+// ****************************************
+// * FOOTERS
+// ****************************************
+
+// .flex-justify-between {
+//     -webkit-box-pack: justify !important;
+//     -webkit-justify-content: space-between !important;
+//     justify-content: space-between !important;
+// }
+
+.footer {
+    display: block;
+    width: 100% !important;
+    // border-top: 1px solid @border-default;
+    background: @bg-extra-dark;
+    color: @text-default;
+
+    &.container-lg {
+        max-width: inherit; //1012px;
+        // margin-right: auto;
+        // margin-left: auto;
+    }
+
+    &.px-3 {
+        padding: 0 !important;
+
+        & > div {
+            padding-right: 16px !important;
+            padding-left: 16px !important;
+        }
+    }
 }
 
-.pagehead-tabs-item:hover {
-    color: @link-light;
-}
 
-.pagehead-tabs-item.selected {
-    color: @text-lightest; //#333;
-    background-color: @bg-light;
-    border-top: 2px solid @nav-item-selection;
-    border-color: @nav-item-selection #abc transparent;
-}
-
-.pagehead-tabs-item.selected:hover {
-    color: #345;
-}
-
-.profilecols .filter-bar {
-    background: none;
-    border-bottom: 1px solid #DDD;
-}
-
-.menu-heading {
-    color: @text-light; //#eee;
-    background-color: @bg-dark;
-    border-bottom: 1px solid #789;
-}
-
-.simple-conversation-list,
-.authors-and-code {
+/**********************************
+ * TABLES/LISTS
+ **********************************/
+// .merge-pr,
+.blankslate,
+.release-body,
+table.files,
+// .table-list,
+// .table-list-bordered,
+// .table-list-cell,
+.table-list-milestones,
+// .js-navigation-container,
+// .js-active-navigation-container,
+{
+    color: @text-light;
     background: @bg-dark;
-    padding: 0.4em;
-    border-radius: 4px;
-    border: 1px solid @border-medium;
+}
+.issues-listing {
+    .js-navigation-container,
+    {
+        background: @bg-dark;
+    }
 }
 
-.diffstat-summary,
-.diffstat-summary strong {
-    color: @text-default;
-}
-
-.boxed-group > h3,
-.boxed-group .heading {
-    background-color: @bg-dark;
-}
-
-.boxed-group-inner {
-    background: @bg-darker;
-    border: 1px solid @border-medium;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    color: #bbb;
-}
-
-.boxed-group-inner .help {
-    border-top: 1px solid #DDD;
-    color: @text-default;
-}
-
-.boxed-group-list .access-level {
-    color: #ace;
-}
-
-.boxed-group-list > li {
-    border-bottom: 1px solid @border-default;
-}
-
-.boxed-group-list > li:hover {
-    background: #567;
-}
-
-.simple-box {
-    border: 1px solid #234;
-    background-color: @bg-darker;
-    border-radius: 3px;
-}
-
-.setup-info-module {
-    background-color: @bg-dark;
+.experiment-repo-nav .repository-content .my-5
+{
+    color: @text-light;
+    background: @bg-dark;
     border: 1px solid @border-default;
-    border-radius: 3px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.075);
 }
 
-
-.setup-wrapper .oauth-permissions-details,
-.oauth-wrapper .setup-wrapper .oauth-permissions-details {
-    background-color: @bg-dark;
+.prose-diff .markdown-body {
+    background: @bg-default;
 }
+.markdown-body {
+    table {
+        tr {
+            background: @bg-default;
 
-.oauth-permissions-details {
-    .permission-title {
-        color: @link-light;
+            &:nth-child(2n) {
+                background: @bg-dark;
+            }
+        }
+        thead td, thead th {
+            background: @bg-extra-dark;
+        }
     }
-
-    .octicon,
-    .mega-octicon {
-        color: #ddd;
-    }
-
-    .permission-summary .access-details {
-        color: #ddd;
-    }
-}
-
-.member-badge {
-    color: @link-default;
-    border-top: 1px solid #eee;
-
-    .octicon {
+    blockquote {
+        background: @bg-extra-transparent;
         color: @text-light;
+        border-left: 0.25em solid #dfe2e5;
+    }
+
+    hr {
+        background-color: rgba(255, 255, 255, 0.3); // #e1e4e8;
+        height: 0.25em;
+        // padding: 0;
+        // margin: 24px 0;
+        // background-color: #e1e4e8;
+        // border: 0;
     }
 }
 
-.tutorial {
-    background-color: @bg-extra-dark-opaque; // #fff;
-    border: 1px solid #fff; // rgba(0, 0, 0, 0.15);
-    // border-radius: 4px;
-    // box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+table.files tr.navigation-focus td
+{
+    background: @bg-highlight;
 }
 
-.review-thread-reply {
-    background-color: @bg-default; // #fafafa;
-    // border-radius: 0 0 3px 3px;
-    border-top: 1px solid #e5e5e5;
-    // padding: 6px 12px;
+.release {
+    margin-bottom: 1em;
+}
 
-    .inline-comment-form {
-        background-color: @bg-light; // fff;
+.release-meta {
+    background: @bg-extra-transparent;
+}
+
+.release-body {
+    border-left: none; //1px solid @border-light;
+}
+
+
+/* OTHER CONTAINERS */
+.merge-pr p,
+{
+    padding: .6em 1em;
+}
+.merge-pr p,
+.branch-action-body,
+.branch-action-body .merge-message,
+.branch-action-body .merge-branch-form,
+.merge-branch-form .commit-form,
+.commit-tease,
+.boxed-group>h3,
+.boxed-group .heading
+{
+    background: @bg-extra-dark;
+    color: @text-light;
+    border: 1px solid @border-light;
+    // border-bottom: none;
+}
+.branch-action-body .merge-message,
+{
+    border: none;
+    border-top: 1px solid @border-light-ts;
+}
+
+.commit-tease-contributors {
+    // padding: 5px 10px;
+    // margin: 10px -10px -10px;
+    background-color: @bg-extra-dark; // #fff;
+    border-top: 1px solid @border-light-ts; // #bedfff;
+    // border-bottom-right-radius: 3px;
+    // border-bottom-left-radius: 3px;
+}
+
+.readme .markdown-body,
+.readme .plain
+{
+    background: @bg-default;
+    color: @text-light;
+}
+
+.js-pinned-repos-reorder-container {
+    h2 {
+        //
     }
+}
+
+.js-contribution-graph,
+.pinned-repos-list .pinned-repo-item
+{
+    background: @bg-dark;
+}
+
+.js-contribution-graph {
+    border: 1px solid @bg-default;
+
+    h2 {
+        margin: 0 10px;
+    }
+    .contributions-setting.float-right {
+        margin-right: 20px;
+    }
+
+    .border-gray-dark {
+        border: none !important;
+    }
+}
+
+.calendar-graph text.month,
+.calendar-graph text.wday
+{
+    // font-size: 10px;
+    fill: @text-default; // #767676;
+}
+
+.filter-list {
+    .filter-item {
+        &:hover {
+            background: @bg-highlight;
+        }
+    }
+}
+
+
+.facebox-popup {
+    // position: relative;
+    background-color: @bg-extra-dark-opaque; //#fff;
+    // background-clip: padding-box;
+    border: 1px solid @border-light-ts; // rgba(27,31,35,0.25);
+    // border-radius: 5px;
+    // box-shadow: 0 0 18px rgba(27,31,35,0.4);
+}
+
+
+.flash {
+    color: @text-default; // #032f62;
+    background-color: @bg-extra-dark; // #dbedff;
+    // border: 1px solid rgba(27,31,35,0.15);
+    // border-radius: 3px;
+}
+.flash-warn {
+    color: @warning; // #735c0f;
+    background-color: @bg-extra-dark; // #fffbdd;
+    // border-color: rgba(27,31,35,0.15);
+    border-color: @warning; // @border-light-ts;
+}
+
+.js-diff-load-container,
+.file .empty
+{
+    background: @bg-extra-dark;
+}
+.diffstat, // #586069;
+.file .data.empty
+{
+    color: @text-default;
 }

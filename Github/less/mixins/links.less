@@ -1,0 +1,137 @@
+a,
+a.text-emphasized //#24292e;
+{
+    color: @link-default; // #0366d6;
+    // text-decoration: none;
+    // background-color: transparent;
+    // -webkit-text-decoration-skip: objects;
+}
+
+.topic-tag {
+    background-color: @bg-dark;
+    border: 1px solid @border-light-ts;
+}
+.topic-tag-link:hover {
+    // text-decoration: none;
+    background-color: @bg-highlight; // #ddeeff;
+}
+
+.btn-link {
+    color: @link-light; // #0366d6;
+
+    &:disabled,
+    &:disabled:hover
+    {
+        color: @link-dark-ts; // #0366d6;
+    }
+}
+
+.btn-octicon {
+    color: @link-light; // #586069;
+    &:hover {
+        color: @link-default; // #0366d6;
+    }
+}
+
+.btn-sm {
+    padding: 3px 10px;
+    font-size: 12px;
+    line-height: 20px;
+}
+.btn-outline {
+    color: #333; // @link-default; // #0366d6;
+    background-color: #eff3f6; // @bg-extra-dark; // #fff;
+    background-image: none;
+}
+.full-commit .btn-outline,
+.full-commit .btn-outline:disabled {
+    background-color: transparent;
+    border-color: @border-light-ts; // rgba(27,31,35,0.15);
+}
+.full-commit .btn-outline:not(:disabled):hover {
+    color: @link-default; // #005cc5;
+    border-color: @link-default; // #005cc5;
+}
+
+.BtnGroup-item {
+    position: relative;
+    float: left;
+    border-right-width: 0;
+    border-radius: 0;
+
+    &:first-child {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+}
+
+
+// .discussion-item-ref-title .title-link {
+//     &:hover {
+//     }
+// }
+
+// GREY, WHITE Hover
+.tabnav-pr .tabnav-tab,  // #586069
+{
+    color: @link-medium;
+
+    &.selected,
+    &:hover, &:focus {
+        color: @link-light;
+    }
+}
+
+// WHITE LINK, Highlight color hover
+table.files td.message a,
+a.text-gray-dark,
+.link-gray-dark,
+.sidebar-assignee .assignee,
+.milestone-name,
+.facebox-user-list-item a, // #24292e
+{
+    color: @link-light !important; // #24292e !important;
+
+    &:hover {
+        color: @link-highlight !important; // #24292e !important;
+        text-decoration: underline !important;
+    }
+}
+
+// GREEN link, Hihglight color hover
+.discussion-item-ref-title .title-link,
+.discussion-item-ref-title .issue-num,
+.user-mention, .team-mention,
+.muted-link,
+.commit-tease-sha, // #444d56
+{
+    color: @link-default !important; // #586069 !important;
+
+    &:hover {
+        color: @link-highlight !important;
+        text-decoration: underline;
+    }
+}
+
+.gh-header-meta
+{
+    .author {
+        color: @link-light;
+
+        &:hover, &:focus {
+            color: @link-highlight;
+        }
+    }
+}
+
+.markdown-body a,
+.tag-references>li a,
+.release-authorship a
+{
+    color: @link-default; // #586069;
+    // text-decoration: none;
+
+    &:hover, &:focus {
+        color: @link-highlight;
+    }
+}

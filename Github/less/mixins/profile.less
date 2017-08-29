@@ -1,0 +1,48 @@
+.user-profile-nav
+{
+    background: @bg-extra-dark;
+}
+
+.user-profile-sticky-bar {
+    &::after {
+        background: @bg-extra-dark;
+    }
+    &.is-stuck {
+        .user-profile-nav
+        {
+            background: none; // @bg-extra-dark;
+        }
+    }
+}
+
+// CONTRIBUTIONS
+.js-contribution-graph
+{
+    margin-bottom: 1em;
+}
+
+.contribution-activity-listing
+{
+    background-color: @bg-dark;
+    padding: 1em;
+    border: 1px solid @border-default;
+    margin-bottom: 1em;
+}
+
+.filter-item {
+    border: 1px solid @border-default;
+    background: @bg-extra-transparent;
+    color: @text-default;
+}
+
+// REPOSITORIES
+
+#user-repositories-list {
+    .d-block {
+        background: @bg-dark;
+        border: 1px solid @border-light-ts !important;
+        margin-bottom: 1em;
+        padding: 1em;
+    }
+}
+

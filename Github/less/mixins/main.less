@@ -1,410 +1,196 @@
-html,
-body {
-    color: @text-light;
-    background-color: @bg-default; //@bg-extra-dark;
+body,
+.release-authorship,
+.gh-header-meta
+{
+    color: @text-default;
 }
 
-.container {
+.Header {
+    border-bottom: 1px solid @border-default;
+}
+
+.container
+{
     width: 80%;
     min-width: 980px;
 }
 
-.dashboard .news {
-    background: @bg-default;
-    border: 1px solid @border-medium;
-    border-radius: 0.3em;
-    padding-top: 0.6em;
-    padding-bottom: 1em;
+.gh-header,
+.wiki-body
+{
+    padding: 1em;
+    // border: 1px solid #666;
+    // border-radius: 3px;
+    // background: @bg-dark;
 }
 
-
-.warning {
-    background-color: #fffccc;
-    color: #900;
-
-    table.files td.icon {
-        color: #900;
-    }
-}
-
-.header,
-.site-header {
-    background-color: @bg-dark;
-    border-bottom: 1px solid @border-light;
-    color: #ddd;
-}
-
-.site-footer {
-    color: @text-default;
-}
-
-.repohead h1 {
+.boxed-group-inner,
+.gh-header,
+.wiki-body,
+.wiki-wrapper .wiki-auxiliary-content
+{
     color: @text-light;
-}
-
-.header-logo-wordmark {
-    color: @text-lightest;
-}
-
-.header-logo-wordmark:hover {
-    color: @link-default;
-}
-
-.header-logo-invertocat {
-    color: @link-light;
-    &:hover {
-        color: @link-default;
-    }
-}
-
-.header-nav-link {
-    color: @link-light;
-    &:hover {
-        color: @link-default;
-    }
-}
-
-// .auth-form form {
-//     box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
-// }
-
-.auth-form-header {
-    color: #FFF;
-    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.3);
-    background-color: @bg-extra-dark;
+    background: @bg-dark;
+    margin-bottom: 1em;
     border: 1px solid @border-default;
-    border-radius: 5px 5px 0px 0px;
 }
 
-.auth-form-body {
-    background-color: @bg-dark;
-    border-width: 0px 1px 1px;
-    border-style: none solid solid;
-    border-color: -moz-use-text-color @border-default @border-default;
-    border-image: none;
-    border-radius: 0px 0px 5px 5px;
+.repohead h1 .octicon {
+    color: #fff;
+}
+.repohead h1.private .octicon {
+    color: #ff0;
+}
+.Label--outline {
+    color: @text-default;
+
+    .private & {
+        color: @warning;
+        border-color: @warning;
+        background: @error;
+    }
 }
 
-.session-authentication {
-    background-color: @bg-default;
+/**************************************
+ * MENUS
+ **************************************/
+.underline-nav-item {
+    color: @text-default;
 
-    .auth-form-header {
-        background-color: transparent;
+    &:hover,
+    &:focus {
         color: @text-light;
     }
 
-    .header-logo {
-        color: @link-light;
+    &.selected
+    {
+        color: @text-light; // #24292e;
+        border-bottom-color: @accent-color; // #e36209;
+        border-bottom-width: 4px;
     }
 }
-
-.form-control, .form-select {
-    // padding: 6px 8px;
-    // color: #333;
-    // border: 1px solid #ddd;
-    // border-radius: 3px;
-    // box-shadow: inset 0 1px 2px rgba(0,0,0,0.075);
-}
-.header-search-wrapper {
-    padding: 0;
-}
-
-.url-field {
-    min-height: 26px;
-}
-
-/** Unread notifications indicator **/
-.notification-indicator .mail-status {
-    background-image: linear-gradient(@link-default-light, @link-default);
-    color: @link-light;
-    border: 2px solid @border-light;
-}
-
-.main-content {
-    // background-color: @bg-default;
-    padding-bottom: 24px;
-}
-
-.discussion-sidebar {
-    padding: 0.8em;
-    border: 1px solid @border-default;
-    border-radius: 0.4em;
-    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.5);
-    box-sizing: border-box;
-    background: @bg-extra-dark;
-    width: 220px
-}
-
-.discussion-timeline-actions {
-   border-top: 2px solid transparent;
-   background: transparent;
-}
-
-.thread-subscription-status {
-    color: @text-lightest;
-    background: transparent;
-    border: 1px solid @border-light;
-}
-
-.progress-bar {
-   background-color: #678;
-}
-
-.sunken-menu {
-    background-image: linear-gradient(to right, @bg-dark 0%, @bg-default 8px);
-    box-shadow: 1px 0px 0px #456 inset;
-
-    &::before {
-        background-color: transparent;
-        background-image: linear-gradient(@bg-default, rgba(255, 255, 255, 0));
-    }
-
-    &::after {
-        background-color: transparent;
-        background-image: linear-gradient(rgba(255, 255, 255, 0), @bg-default);
-    }
-}
-
-.sunken-menu-item {
-    .octicon {
-        color: #ccc;
-    }
-
-    &:focus .octicon,
-    &:hover .octicon { color: @link-light; }
-
-    &.selected {
-        color: @link-light;
-        background-color: @bg-default;
-        border-color: #678 #0c0 #678 transparent;
-        border-radius: 0px 4px 4px 0px;
-        box-shadow: 3px 1px 3px rgba(0, 0, 0, 0.35);
-
-        .octicon {
-            color: @link-light;
-        }
-
-        &:after {
-            width: 3px;
-            background-color: #0c0;
-            border-radius: 0 3px 3px 0
-        }
-    }
-
-
-}
-
-.sunken-menu-separator {
-    background-image: radial-gradient(farthest-side at left top , #345, rgba(244, 244, 244, 0));
-
-    &::before {
-        background-image: linear-gradient(to right, #678 70%, #89a 100%);
-    }
-}
-
-.tabnav-pr .tabnav-tab,
-.tabnav-tab {
-    color: #ddd;
-    background-color: @bg-darker;
-    border: 1px solid @border-default;
-    border-bottom: none;
-    margin-bottom: 1px;
-    border-radius: 3px 3px 0 0;
-}
-
-.tabnav-tab.selected { background-color: @bg-light; }
-.tabnav-pr .tabnav-tab.selected { color: @link-light; }
-
-.tabnav-extra { color: #ddd; }
-a.tabnav-extra:hover { color: @link-default; }
-
-.subnav-item {
-    border: 1px solid @border-default;
-    background-color: @bg-darker;
-    color: @text-default;
+.pagehead-tabs-item,
+.reponav-item,
+.reponav-item .octicon,
+{
+    color: @text-light;
 
     &:hover, &:focus {
-        text-decoration: none;
-        background-color: @nav-item-selection;
+        color: @text-highlight;
+    }
+
+    &.selected
+    {
+        color: @text-light; // #24292e;
+        border-top-color: @accent-color; // #e36209;
+        border-top-width: 4px;
+        background: @bg-extra-dark;
+    }
+}
+
+.dropdown-menu {
+    background-color: @bg-dark-opaque;
+    border: 1px solid @border-light-ts;
+}
+.dropdown-item {
+    color: inherit;
+}
+
+.Counter
+{
+    background-color: #fff;
+    color: #333;
+}
+
+.discussion-sidebar-heading {
+    color: #fff;
+}
+.discussion-sidebar-toggle {
+    &:hover, &:focus
+    {
+        color: @link-highlight; //#0366d6;
+    }
+}
+
+
+.protip {
+    background: @bg-extra-dark;
+    padding: 1em;
+    border: 1px solid @border-highlight; // @border-light;
+    margin: 0;
+
+    strong {
         color: @text-light;
     }
 
-    &.selected, &.selected:hover, &.selected:focus {
-        color: @link-light; //#fff;
-        background-color: @nav-item-selection; //#4078c0;
-        border-color: @link-default-light; //#4078c0;
+    .octicon {
+        color: @text-light !important;
     }
 }
 
-
-.subnav-search-context .btn {
-    color: @link-light;
+table.files td.icon,
+table.files td.icon .octicon-file-directory {
+    color: #fff;
 }
 
-.text-emphasized {
-    color: @link-light;
-}
-
-.text-muted, .text-gray {
-    color: @text-default !important;
-}
-
-
-.table-list {
-    background-color: @bg-darker;
-}
-
-
-.repository-meta {
-    color: @text-light; //#ddd;
-}
-
-.repo-list-item {
-    background: @bg-default;
-    border: 1px solid @border-medium;
-    border-radius: 0.4em;
-    padding: 1em 1em 4em 1em;
-    margin: 1em -1em;
-}
-
-.repo-list-item .repo-list-stats,
-.repo-list-item .repo-list-name,
-.repo-list-item .repo-list-description,
-.repo-list-item .repo-list-meta {
-    z-index: 2;
-    position: relative;
-}
-
-.repo-list .participation-graph {
-    // position: absolute;
-    // right: 0;
-    // bottom: 0;
-    left: 1em;
-    z-index: 1;
-    color: @link-default-light;
-    opacity: 0.2 !important;
-
-    .bars {
-        // opacity: 0.2 !important;
-
-        rect {
-            fill: @link-default-light !important;
-        }
+.mini-repo-list {
+    .private {
+        // box-shadow: 0 0 10px rgba(0,0,255,0.7) inset;
+        border-right: 4px solid #f00;
     }
 }
 
-.private .mini-repo-list-item {
-    background-color: @bg-darker;
+.public .mini-repo-list-item .repo-icon,
+.private .mini-repo-list-item .repo-icon,
+.mini-repo-list-item .stars
+{
+    color: @text-light;
 }
+// .private .mini-repo-list-item .repo-icon,
+// {
+//     color: #ff0; //  @text-light;
+// }
 
-.mini-repo-list-item {
-    .repo-description,
-    .repo-icon,
-    .stars {
-        color: @text-light;
-        fill: currentColor;
-    }
+.private .mini-repo-list-item,
+.more-repos,
+{
+    // background-color: #fafbfc;
+    // box-shadow: inset 0 1px 0 #d1d5da;
+    background: none; // @bg-dark; // #fffdef;
 }
 
 .filter-bar {
-    background-color: @bg-darker;
-    border-bottom: 1px solid @border-light;
+    background-color: @bg-extra-dark; //  #fafbfc;
+    // border-bottom: 1px solid #e5e5e5;
 }
 
-.repo-filterer .repo-filter.filter-selected {
-    color: @link-light;
-    border-bottom-color: @link-default;
-}
+.news {
+    div.message,
+    li blockquote,
+    blockquote,
+    {
+        color: @text-default; // #586069;
+    }
 
+    .alert
+    {
+        background: @bg-dark;
+        border: 1px solid @border-light-ts;
+        margin-bottom: 1em;
+        color: @text-light;
 
-.feature-callout {
-    color: #666;
-    background-color: @bg-extra-dark; // #f9f9f9;
-    border: 1px solid #e9e9e9;
-    border-top: 1px dashed #ddd;
-    border-bottom: 0;
+        .time,
+        .simple .title,
+        {
+            color: @text-default; // #586069;
+        }
 
-    .feature-dismiss-link {
-        color: @link-default; // inherit;
+        .markdown-body blockquote {
+            background: none;
+        }
+
+        .octicon {
+            color: @text-light; // #959da5;
+        }
     }
 }
-
-/**************************************************/
-/* Home Page */
-/**************************************************/
-
-.bootcamp h1 {
-    background-color: @bg-dark;
-    border-bottom: none;
-}
-.bootcamp .bootcamp-body {
-    background-color:@bg-darker;
-    /* border-color: #345 #678 #678 #678; */
-    border-color: @border-dark;
-}
-.bootcamp ul li {
-    background-image: linear-gradient(#fff, #999);
-    border: 1px solid @border-dark;
-    box-shadow: 0 0 8px rgba(0,0,0,0.3);
-}
-
-input.input-contrast,
-.input-contrast {
-    background-color: #234;
-    color: #fff;
-    border-color: #678;
-}
-
-input.input-contrast:focus,
-.input-contrast:focus {
-    background-color: #345;
-    color: #fff
-}
-
-.site-header-nav-main .nav-item {
-    border-top: 0;
-    border-bottom: 4px solid transparent;
-}
-.site-header-nav .nav-item {
-    color: @link-dim;
-
-    &:hover {
-        color: @link-light; //@nav-item-selection
-    }
-}
-
-.pagehead-nav-item {
-    color: @link-dim;
-}
-
-.pagehead-nav-item:hover {
-    color: @link-light;
-}
-
-.pagehead-nav-item.selected {
-    color: @link-light;
-    border-bottom: 3px solid @nav-item-selection;
-}
-
-/* Explore GitHub */
-.collection-card {
-    background: #345;
-    border: 1px solid #678;
-    border-radius: 3px;
-    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
-
-.collection-card-meta {
-    color: #ccc;
-}
-
-
-/**************************************************/
-/* STATES */
-/**************************************************/
-
-.state { background-color: #999; }
-.state-open, .state-proposed, .state-reopened { background-color: @button-default; color: @link-light; }
-.state-closed { background-color: #DD2C00; }
-.state-merged { background-color: #6E5494; border: 1px solid #9e84c4; }
-
