@@ -45,12 +45,13 @@ a.text-emphasized //#24292e;
 }
 .full-commit .btn-outline,
 .full-commit .btn-outline:disabled {
-    background-color: transparent;
-    border-color: @border-light-ts; // rgba(27,31,35,0.15);
+    background-color: #eff3f6; // transparent;
+    // border-color: @border-light-ts; // rgba(27,31,35,0.15);
 }
 .full-commit .btn-outline:not(:disabled):hover {
-    color: @link-default; // #005cc5;
-    border-color: @link-default; // #005cc5;
+    background: #e6ebf1;
+    color: #333; // @link-default; // #005cc5;
+    // border-color: @link-default; // #005cc5;
 }
 
 .BtnGroup-item {
@@ -87,14 +88,19 @@ table.files td.message a,
 a.text-gray-dark,
 .link-gray-dark,
 .sidebar-assignee .assignee,
+.tabnav-extra,
 .milestone-name,
+.milestone-title-link a,
 .facebox-user-list-item a, // #24292e
+.full-commit .branches-list li a,
+.branches-tag-list li a, .branches-tag-list li .ellipsis-expander,
+.toolbar-item, .toolbar-item .menu-target,
 {
     color: @link-light !important; // #24292e !important;
 
     &:hover {
-        color: @link-highlight !important; // #24292e !important;
-        text-decoration: underline !important;
+        color: @link-default !important; // #24292e !important;
+        // text-decoration: underline !important;
     }
 }
 

@@ -199,3 +199,39 @@
 .commit .commit-title .issue-link {
     color: @link-default; // #0366d6;
 }
+
+// COMPARING CHANGES
+.range-editor {
+    background-color: @bg-extra-transparent; // #fafbfc;
+    // border: 1px solid #e1e4e8;
+}
+.range-editor-icon { color: @text-light; }
+
+.compare-pr-placeholder {
+    color: @text-light; // #4c4a42;
+    background: @bg-dark; // #fff9ea;
+    // border: solid 1px #dfd8c2;
+    p {
+        color: @text-light;
+    }
+}
+
+.commits-listing {
+    background: @bg-dark;
+    padding: 0.5em 1em;
+    border: 1px solid @border-light-ts;
+}
+
+.timeline-commits .author,
+.commit-branches,
+{
+    color: @link-light;
+}
+
+.commit-desc,
+.commit-desc pre {
+    color: @text-default;
+}
+.commit-desc+.commit-branches {
+    border-top: 1px solid @border-light-ts;
+}
